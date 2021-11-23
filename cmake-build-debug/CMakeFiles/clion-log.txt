@@ -1,0 +1,7 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main"
+-- Using vendored Catch2 library (/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/catch)
+-- Using vendored Ge211 library (/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211)
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug

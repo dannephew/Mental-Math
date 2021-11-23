@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libcatch.a CMakeFiles/catch.dir/src/catch.cxx.o CMakeFiles/catch.dir/__/__/__/src/game_config.cxx.o CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o CMakeFiles/catch.dir/__/__/__/src/block.cxx.o CMakeFiles/catch.dir/__/__/__/src/player.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libcatch.a
