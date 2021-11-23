@@ -10,7 +10,11 @@
 
 class player
 {
-
+private:
+    int num_l1;
+    int num_l2;
+    int lives;
+    int score;
 };
 
 
