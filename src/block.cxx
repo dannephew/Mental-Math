@@ -15,6 +15,7 @@ Block::Block(Model& model, ge211::Dims<int> screen_dimensions)
     random_operator_(1, 4),
     random_num_l1_(0,9),
     random_num_l2_(0,99),
+    block_level(1),
     config(Game_config()),
     model_(model),
     player_(Player())
@@ -95,11 +96,19 @@ Block::get_answer(Block block)
     return block.answer;
 }
 
-Block::block_level
-Block::advance_level()
+void
+Block::advance_level(Block block)
 {
-    return block_level::l2;
+    block.block_level += 1;
 }
+
+// Block::block_level
+// Block::advance_level()
+// {
+//     //how to change block_level for all blocks?
+//
+//     return block_level::l2;
+// }
 
 
 

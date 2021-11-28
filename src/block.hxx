@@ -50,12 +50,13 @@ private:
         int answer;         //can write function for this
         bool life;          //whether the block has an extra life attached
         Velocity velocity;      // The velocity of the block in pixels per tick.
-        enum class block_level  //determines whether the question is single or
-                                // double digits
-        {
-            l1,
-            l2
-        };
+        int block_level;
+        // enum class block_level  //determines whether the question is single or
+        //                         // double digits
+        // {
+        //     l1,
+        //     l2
+        // };
 
         ge211::Dims<int> screen_dimensions_;
         ge211::Random_source<int> random_x_coor_;     //for assigning coord
@@ -74,7 +75,7 @@ public:
         explicit Block(Model&, ge211::Dims<int> screen_dimensions);
         // Block(Position coord);
 
-        block_level advance_level();
+        void advance_level(Block block);
         void create_question(Block block);
         void create_operator(Block block);
         void calculate_answer(Block block);

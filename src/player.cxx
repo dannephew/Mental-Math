@@ -41,7 +41,6 @@ Player::calculate_score(Player& player, Block& block) const
         //l2 questions
         score += num_l2_correct*150;
     }
-    return 0;
 }
 
 
