@@ -71,7 +71,7 @@ private:
 
 public:
         ///Constructors
-        explicit Block(Model&);
+        explicit Block(Model&, ge211::Dims<int> screen_dimensions);
         // Block(Position coord);
 
         void create_question(Block block);
@@ -79,11 +79,11 @@ public:
         void calculate_answer(Block block);
         Position assign_coord();
 
-        Position get_coord();
-        int get_width();
-        int get_height();
-        std::string get_question();
-        int get_answer();
+        Position get_coord(Block block);
+        int get_width(Block block);
+        int get_height(Block block);
+        std::string get_question(Block block);
+        int get_answer(Block block);
         // ///Member functions
         // //Assigns the coordinates for a block
         // //y coordinate is always 0; x coordinate is randomized

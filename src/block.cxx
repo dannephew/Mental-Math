@@ -7,9 +7,9 @@
 #include <iostream>
 #include<sstream>
 
-Block::Block(Model& model)
+Block::Block(Model& model, ge211::Dims<int> screen_dimensions)
     : coord(assign_coord()),
-    screen_dimensions_(screen_dimensions_),
+    screen_dimensions_(screen_dimensions),
     random_x_coor_(0, screen_dimensions_.width),
     random_life_(0, 60),
     random_operator_(1, 4),
@@ -18,9 +18,7 @@ Block::Block(Model& model)
     config(Game_config()),
     model_(model),
     player_(Player())
-{
-    screen_dimensions_ = config.scene_dims;
-}
+{}
 
 Position
 Block::assign_coord()
@@ -63,52 +61,39 @@ Block::calculate_answer(Block block)
 }
 
 
-//Purpose?
-// Block::Block(Position coord)
-// {
-//
-// }
+Position
+Block::get_coord(Block block)
+{
+    return block.coord;
+}
 
-// Position
-// Block::assign_coord()
-// {
-//     int x = random_x_coor_.next();
-//     return Position(x, 0);
-// }
-//
-// bool
-// Block::destroy_block(Block block) const
-// {
-//     //    for (Block& b : bricks) {
-//     //         //datatype of each brick in the vector
-//     //         if (hits_block(b) == true) {
-//     //             //replace current brick with last brick
-//     //             //bricks.back()
-//     //             b = bricks.back();
-//     //             //remove last brick using pop_back()
-//     //             bricks.pop_back();
-//     //             return true;
-//     //         }
-//     //     }
-//     //     return false;
-//
-//     for (Block& b : model_.blocks()) {
-//         if (hits_bottom(b) == true) {
-//             b =
-//         }
-//     }
-//     //remove block from blocks vector
-//     return false;
-// }
-//
-// bool
-// Block::hits_bottom(Block block) const
-// {
-//     int bottom_y = block.coord.y+block.height;
-//     if (bottom_y > config.scene_dims.height) {
-//         return true;
-//     }
-//     return false;
-// }
+int
+Block::get_width(Block block)
+{
+    return block.width;
+}
+
+int
+Block::get_height(Block block)
+{
+    return block.height;
+}
+
+std::string
+Block::get_question(Block block)
+{
+    std::string s = "";
+    for (i=0; i < 2; i++) {
+        s += block.question[i];
+    }
+    return s;
+}
+
+int
+Block::get_answer(Block block)
+{
+    return block.answer;
+}
+
 
 

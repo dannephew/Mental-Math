@@ -7,8 +7,7 @@
 class Controller : public ge211::Abstract_game
 {
 public:
-    // explicit Controller(Model&);
-        //// Controller(ge211::Dims<int> board_dimensions);
+    explicit Controller(Model&);
     Controller(ge211::Dims<int> board_dimensions);
 
 
