@@ -31,7 +31,7 @@ private:
 
     static ge211::Timer time_game();
 
-    Block block_level_   = Block::block_level::l1;
+    // Block block_level_   = Block::block_level::l1;
 
 
 

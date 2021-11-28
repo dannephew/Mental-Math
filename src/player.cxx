@@ -32,14 +32,20 @@ Player::calculate_score(Player& player, Block& block) const
     if (answer_history[0] == true && answer_history[1] == true &&
     answer_history[2] == true) {
         //l1 questions
-        if ()
-        //l2 questions
+        if (block.get_block_level(block) == 1) {
+            player.score += 110;
+            //l2 questions
+        } else if (block.get_block_level(block) == 2) {
+            player.score += 160;
+        }
     } else {
         //l1 questions
-        if ()
-        player.score += 100;
-        //l2 questions
-        score += num_l2_correct*150;
+        if (block.get_block_level(block) == 1) {
+            player.score += 100;
+            //l2 questions
+        } else if (block.get_block_level(block) == 2) {
+            player.score += 150;
+        }
     }
 }
 

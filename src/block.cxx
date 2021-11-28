@@ -102,6 +102,12 @@ Block::advance_level(Block block)
     block.block_level += 1;
 }
 
+int
+Block::get_block_level(Block block)
+{
+    return block.block_level;
+}
+
 // Block::block_level
 // Block::advance_level()
 // {

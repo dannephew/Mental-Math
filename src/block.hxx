@@ -86,6 +86,7 @@ public:
         int get_height(Block block);
         std::string get_question(Block block);
         int get_answer(Block block);
+        int get_block_level(Block block);
         // ///Member functions
         // //Assigns the coordinates for a block
         // //y coordinate is always 0; x coordinate is randomized
