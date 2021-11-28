@@ -95,5 +95,11 @@ Block::get_answer(Block block)
     return block.answer;
 }
 
+Block::block_level
+Block::advance_level()
+{
+    return block_level::l2;
+}
+
 
 

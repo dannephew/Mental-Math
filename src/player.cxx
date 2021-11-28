@@ -26,12 +26,13 @@ Player::Player()
 //+10 for each question once combo begins
 
 void
-Player::calculate_score(Player& player) const
+Player::calculate_score(Player& player, Block& block) const
 {
     //calls calculate_combo for combo points
     if (answer_history[0] == true && answer_history[1] == true &&
     answer_history[2] == true) {
         //l1 questions
+        if ()
         //l2 questions
     } else {
         //l1 questions

@@ -118,3 +118,9 @@ Model::calculate_answer(Block block)
 {
     return 0;
 }
+
+// void
+// Model::advance_level()
+// {
+//     block_level_ = Block::block_level::l2;
+// }

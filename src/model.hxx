@@ -31,6 +31,8 @@ private:
 
     static ge211::Timer time_game();
 
+    Block block_level_   = Block::block_level::l1;
+
 
 
     //block should have velocity
@@ -56,7 +58,7 @@ public:
 
     void assign_life();
     void game_over();
-
+    void advance_level();      //go from l1 to l2
 
     ///Member functions
     //Assigns the coordinates for a block
