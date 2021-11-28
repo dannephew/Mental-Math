@@ -4,6 +4,7 @@
 #pragma once
 
 #include <iostream>
+#include "block.hxx"
 #ifndef GAME_PLAYER_HXX
 #define GAME_PLAYER_HXX
 
@@ -26,8 +27,7 @@ public:
     Player();
 
     //need args?
-    int calculate_score(Player& player) const;
-    int calculate_combo(Player& player) const;
+    void calculate_score(Player& player, Block& block) const;
     bool correct_answer(Player& player);
 
     int get_total_correct(Player& player);

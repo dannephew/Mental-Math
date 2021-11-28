@@ -20,19 +20,29 @@ Player::Player()
 //  L1 answers get +100
 //  L2 answers get +150
 //  Combos begin at three consecutive correct answers
+    //L1 answers get +110
+    //L2 answers get 1
 //create a list of what correct_answer returns
 //+10 for each question once combo begins
-int
+
+void
 Player::calculate_score(Player& player) const
 {
+    //calls calculate_combo for combo points
+    if (answer_history[0] == true && answer_history[1] == true &&
+    answer_history[2] == true) {
+        //l1 questions
+        //l2 questions
+    } else {
+        //l1 questions
+        if ()
+        player.score += 100;
+        //l2 questions
+        score += num_l2_correct*150;
+    }
     return 0;
 }
 
-int
-Player::calculate_combo(Player& player) const
-{
-    return 0;
-}
 
 bool
 Player::correct_answer(Player& player)
