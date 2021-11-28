@@ -233,30 +233,6 @@ __/__/__/src/game_config.cxx.s:
 	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/game_config.cxx.s
 .PHONY : __/__/__/src/game_config.cxx.s
 
-__/__/__/src/play_math_game.o: __/__/__/src/play_math_game.cxx.o
-.PHONY : __/__/__/src/play_math_game.o
-
-# target to build an object file
-__/__/__/src/play_math_game.cxx.o:
-	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o
-.PHONY : __/__/__/src/play_math_game.cxx.o
-
-__/__/__/src/play_math_game.i: __/__/__/src/play_math_game.cxx.i
-.PHONY : __/__/__/src/play_math_game.i
-
-# target to preprocess a source file
-__/__/__/src/play_math_game.cxx.i:
-	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.i
-.PHONY : __/__/__/src/play_math_game.cxx.i
-
-__/__/__/src/play_math_game.s: __/__/__/src/play_math_game.cxx.s
-.PHONY : __/__/__/src/play_math_game.s
-
-# target to generate assembly for a file
-__/__/__/src/play_math_game.cxx.s:
-	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.s
-.PHONY : __/__/__/src/play_math_game.cxx.s
-
 __/__/__/src/player.o: __/__/__/src/player.cxx.o
 .PHONY : __/__/__/src/player.o
 
@@ -280,6 +256,54 @@ __/__/__/src/player.s: __/__/__/src/player.cxx.s
 __/__/__/src/player.cxx.s:
 	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/player.cxx.s
 .PHONY : __/__/__/src/player.cxx.s
+
+__/__/__/test/block_test.o: __/__/__/test/block_test.cxx.o
+.PHONY : __/__/__/test/block_test.o
+
+# target to build an object file
+__/__/__/test/block_test.cxx.o:
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.o
+.PHONY : __/__/__/test/block_test.cxx.o
+
+__/__/__/test/block_test.i: __/__/__/test/block_test.cxx.i
+.PHONY : __/__/__/test/block_test.i
+
+# target to preprocess a source file
+__/__/__/test/block_test.cxx.i:
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.i
+.PHONY : __/__/__/test/block_test.cxx.i
+
+__/__/__/test/block_test.s: __/__/__/test/block_test.cxx.s
+.PHONY : __/__/__/test/block_test.s
+
+# target to generate assembly for a file
+__/__/__/test/block_test.cxx.s:
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.s
+.PHONY : __/__/__/test/block_test.cxx.s
+
+__/__/__/test/player_test.o: __/__/__/test/player_test.cxx.o
+.PHONY : __/__/__/test/player_test.o
+
+# target to build an object file
+__/__/__/test/player_test.cxx.o:
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.o
+.PHONY : __/__/__/test/player_test.cxx.o
+
+__/__/__/test/player_test.i: __/__/__/test/player_test.cxx.i
+.PHONY : __/__/__/test/player_test.i
+
+# target to preprocess a source file
+__/__/__/test/player_test.cxx.i:
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.i
+.PHONY : __/__/__/test/player_test.cxx.i
+
+__/__/__/test/player_test.s: __/__/__/test/player_test.cxx.s
+.PHONY : __/__/__/test/player_test.s
+
+# target to generate assembly for a file
+__/__/__/test/player_test.cxx.s:
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f .cs211/lib/catch/CMakeFiles/catch.dir/build.make .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.s
+.PHONY : __/__/__/test/player_test.cxx.s
 
 src/catch.o: src/catch.cxx.o
 .PHONY : src/catch.o
@@ -325,12 +349,15 @@ help:
 	@echo "... __/__/__/src/game_config.o"
 	@echo "... __/__/__/src/game_config.i"
 	@echo "... __/__/__/src/game_config.s"
-	@echo "... __/__/__/src/play_math_game.o"
-	@echo "... __/__/__/src/play_math_game.i"
-	@echo "... __/__/__/src/play_math_game.s"
 	@echo "... __/__/__/src/player.o"
 	@echo "... __/__/__/src/player.i"
 	@echo "... __/__/__/src/player.s"
+	@echo "... __/__/__/test/block_test.o"
+	@echo "... __/__/__/test/block_test.i"
+	@echo "... __/__/__/test/block_test.s"
+	@echo "... __/__/__/test/player_test.o"
+	@echo "... __/__/__/test/player_test.i"
+	@echo "... __/__/__/test/player_test.s"
 	@echo "... src/catch.o"
 	@echo "... src/catch.i"
 	@echo "... src/catch.s"

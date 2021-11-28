@@ -10,8 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/block.cxx.o"
   "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/game_config.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/play_math_game.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o"
   "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/player.cxx.o"
+  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/block_test.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.o"
+  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/player_test.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.o"
   "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/catch/src/catch.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/src/catch.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

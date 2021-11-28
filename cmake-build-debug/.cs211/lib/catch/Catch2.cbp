@@ -80,13 +80,16 @@
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.hxx">
 			<Option target="catch"/>
 		</Unit>
-		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/play_math_game.cxx">
-			<Option target="catch"/>
-		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx">
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.hxx">
+			<Option target="catch"/>
+		</Unit>
+		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/block_test.cxx">
+			<Option target="catch"/>
+		</Unit>
+		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/player_test.cxx">
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/CMakeLists.txt">

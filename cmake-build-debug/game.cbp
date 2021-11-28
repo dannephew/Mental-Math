@@ -413,9 +413,6 @@
 			<Option target="model_test"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/play_math_game.cxx">
-			<Option target="catch"/>
-		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx">
 			<Option target="game"/>
 			<Option target="catch"/>
@@ -429,8 +426,14 @@
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/view.hxx">
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/block_test.cxx">
+			<Option target="catch"/>
+		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/model_test.cxx">
 			<Option target="model_test"/>
+		</Unit>
+		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/player_test.cxx">
+			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

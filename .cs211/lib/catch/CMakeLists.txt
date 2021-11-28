@@ -10,7 +10,7 @@ project(Catch2
 
 add_library(catch
         include/catch.hxx
-        src/catch.cxx ../../../src/game_config.cxx ../../../src/game_config.hxx ../../../src/block.cxx ../../../src/block.hxx ../../../src/player.cxx ../../../src/player.hxx)
+        src/catch.cxx ../../../src/game_config.cxx ../../../src/game_config.hxx ../../../src/block.cxx ../../../src/block.hxx ../../../src/player.cxx ../../../src/player.hxx ../../../test/block_test.cxx ../../../test/player_test.cxx)
 
 set_target_properties(catch PROPERTIES
         CXX_EXTENSIONS  Off

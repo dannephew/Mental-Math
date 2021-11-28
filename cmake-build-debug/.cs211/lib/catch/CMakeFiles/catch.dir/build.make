@@ -92,22 +92,9 @@ include .cs211/lib/catch/CMakeFiles/catch.dir/flags.make
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/catch.dir/__/__/__/src/game_config.cxx.s"
 	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.cxx" -o CMakeFiles/catch.dir/__/__/__/src/game_config.cxx.s
 
-.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o: .cs211/lib/catch/CMakeFiles/catch.dir/flags.make
-.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o: ../src/play_math_game.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o"
-	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/play_math_game.cxx"
-
-.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.i"
-	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/play_math_game.cxx" > CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.i
-
-.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.s"
-	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/play_math_game.cxx" -o CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.s
-
 .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/block.cxx.o: .cs211/lib/catch/CMakeFiles/catch.dir/flags.make
 .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/block.cxx.o: ../src/block.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/block.cxx.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/block.cxx.o"
 	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/catch.dir/__/__/__/src/block.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.cxx"
 
 .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/block.cxx.i: cmake_force
@@ -120,7 +107,7 @@ include .cs211/lib/catch/CMakeFiles/catch.dir/flags.make
 
 .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/player.cxx.o: .cs211/lib/catch/CMakeFiles/catch.dir/flags.make
 .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/player.cxx.o: ../src/player.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/player.cxx.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/player.cxx.o"
 	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/catch.dir/__/__/__/src/player.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx"
 
 .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/player.cxx.i: cmake_force
@@ -131,25 +118,53 @@ include .cs211/lib/catch/CMakeFiles/catch.dir/flags.make
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/catch.dir/__/__/__/src/player.cxx.s"
 	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx" -o CMakeFiles/catch.dir/__/__/__/src/player.cxx.s
 
+.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.o: .cs211/lib/catch/CMakeFiles/catch.dir/flags.make
+.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.o: ../test/block_test.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.o"
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/block_test.cxx"
+
+.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.i"
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/block_test.cxx" > CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.i
+
+.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.s"
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/block_test.cxx" -o CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.s
+
+.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.o: .cs211/lib/catch/CMakeFiles/catch.dir/flags.make
+.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.o: ../test/player_test.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.o"
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/player_test.cxx"
+
+.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.i"
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/player_test.cxx" > CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.i
+
+.cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.s"
+	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/player_test.cxx" -o CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.s
+
 # Object files for target catch
 catch_OBJECTS = \
 "CMakeFiles/catch.dir/src/catch.cxx.o" \
 "CMakeFiles/catch.dir/__/__/__/src/game_config.cxx.o" \
-"CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o" \
 "CMakeFiles/catch.dir/__/__/__/src/block.cxx.o" \
-"CMakeFiles/catch.dir/__/__/__/src/player.cxx.o"
+"CMakeFiles/catch.dir/__/__/__/src/player.cxx.o" \
+"CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.o" \
+"CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.o"
 
 # External object files for target catch
 catch_EXTERNAL_OBJECTS =
 
 .cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/src/catch.cxx.o
 .cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/game_config.cxx.o
-.cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/play_math_game.cxx.o
 .cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/block.cxx.o
 .cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/src/player.cxx.o
+.cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/block_test.cxx.o
+.cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/__/__/__/test/player_test.cxx.o
 .cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/build.make
 .cs211/lib/catch/libcatch.a: .cs211/lib/catch/CMakeFiles/catch.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libcatch.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libcatch.a"
 	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && $(CMAKE_COMMAND) -P CMakeFiles/catch.dir/cmake_clean_target.cmake
 	cd "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/catch.dir/link.txt --verbose=$(VERBOSE)
 

@@ -28,20 +28,13 @@ struct Game_config
     // Number of pixels from bottom of screen to leave room for text box:
     int bottom_margin;
 
-    // Life_generation_rate (1/min)
-    int life_generation_rate;
-
 
     // The dimensions of each block
     ge211::Dims<int> l1_block_dims;
     ge211::Dims<int> l2_block_dims;
 
-
     int num_lives;
     int num_l1;     // Number of L1 questions before L2 begins
-
-
-
 
 };
 
