@@ -5,12 +5,14 @@
 //Vectors: https://www.geeksforgeeks.org/vector-in-cpp-stl/
 
 Model::Model(Game_config const& config)
-    : random_x_coor_(0, config.scene_dims.width),
-      random_life_(0, 60),
-      config(config)
+    : random_life_(0, 60),
+      config(config),
+      block_(Block(config))
 {
     static ge211::Timer t = ge211::Timer();
+    if (t.elapsed_time().seconds() % 60 == 0) {
 
+    }
     //calls this, which adds a block to blocks_
     new_block();
 }
@@ -19,9 +21,15 @@ Model::Model(Game_config const& config)
 void
 Model::on_frame(double dt)
 {
+
     //Adds block to blocks over time
         // push_back() – It push the elements into a vector from the back
     //Compares player's answer to the answer of every block
+
+    //    Block b = Block(config.side_margin, config.top_margin, config.brick_dims().width, config.brick_dims().height);
+
+
+
 }
 
 
@@ -63,8 +71,8 @@ Model::game_over()
 }
 
 //Important for view
-std::vector<std::unique_ptr<Block>>&
-Model::blocks()
+std::vector<Block>&
+Model::get_blocks()
 {
     //blocks is not vector of unique pointers of blocks
     return blocks_;
@@ -74,11 +82,16 @@ void
 Model::new_block()
 {
     int x = random_x_coor_.next();
+
+
     //creates new block
+
+        //NOT TRUE DONT USE:
         //make_unique creates a unique pointer to the block object
         //because .push_back() requires a pointer as an input
     //blocks.push_back(std::make_unique<Block>(
     // )
+
 }
 
 

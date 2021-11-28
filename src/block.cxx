@@ -7,17 +7,20 @@
 #include <iostream>
 #include<sstream>
 
-Block::Block(Model model, Game_config game_config)
+Block::Block(Game_config game_config)
     : coord(assign_coord()),
-    random_x_coor_(0, game_config.scene_dims.width),
+    width(10),
+    height(5),
+    random_x_coor_(0, game_config.scene_dims.width - width),
     random_life_(0, 60),
     random_operator_(1, 4),
     random_num_l1_(0,9),
     random_num_l2_(0,99),
     block_level(1),
-    model_(model),
     player_(Player())
-{}
+{
+}
+
 
 Position
 Block::assign_coord()
@@ -29,7 +32,7 @@ Block::assign_coord()
 void
 Block::create_question(Block block)
 {
-    if (player_.get_total_correct(player_) >= 10) {
+    if (block.block_level > 1) {
         //l1
         block.question[0] = ge211::to_string(random_num_l1_.next());
         block.question[2] = ge211::to_string(random_num_l1_.next());
@@ -97,7 +100,10 @@ Block::get_answer(Block block)
 void
 Block::advance_level(Block block)
 {
-    block.block_level += 1;
+    if (block.block_level == 1) {
+        block.block_level += 1;
+    }
+    //update height and width
 }
 
 int
@@ -105,6 +111,7 @@ Block::get_block_level(Block block)
 {
     return block.block_level;
 }
+
 
 // Block::block_level
 // Block::advance_level()

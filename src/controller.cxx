@@ -3,8 +3,10 @@
 
 Controller::Controller(Model& model)
         : model_(model),
-        view_(model_)
+        view_(model)
+        //not recognizing as member variables
 { }
+    //issue
 
 void
 Controller::draw(ge211::Sprite_set& set)
@@ -68,4 +70,10 @@ void
 Controller::load_num_()
 {
     view_.load_num()
+}
+
+void
+Controller::on_start()
+{
+    return;
 }

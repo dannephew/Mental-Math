@@ -22,6 +22,7 @@ private:
     bool game_over;
     int input;         //input is whatever on_key collects from controller
     bool answer_history[3]; //do not initialize
+    // Block block_;
 
 public:
     Player();

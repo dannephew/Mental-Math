@@ -18,6 +18,11 @@ struct Game_config
     // The ball's initial velocity {width, height}:
     ge211::Dims<int> velocity_0;
 
+    ge211::Dims<int> block_dims_l1;
+    ge211::Dims<int> block_dims_l2;
+
+
+
     // Boost to velocity on L2 (acceleration)
     ge211::Dims<int> boost;
         //only affects y

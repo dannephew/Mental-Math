@@ -60,19 +60,22 @@ private:
 
         // ge211::Dims<int> screen_dimensions_;
         ge211::Random_source<int> random_x_coor_;     //for assigning coord
+
+                //deleted copy constructor?
         ge211::Random_source<int> random_life_;     //for assigning
     // random life
         ge211::Random_source<int> random_num_l1_;
         ge211::Random_source<int> random_num_l2_;
         ge211::Random_source<int> random_operator_;
-        // Game_config const config;
+        Game_config const config;
 
-        Model& model_;
+        // Model& model_;
         Player player_;
 
 public:
         ///Constructors
-        explicit Block(Model, Game_config);
+        //Block();
+        explicit Block(Game_config);
         // Block(Position coord);
 
         void advance_level(Block block);

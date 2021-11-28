@@ -11,7 +11,8 @@ Player::Player()
     total_correct(0),
     lives(3),
     score(0),
-    game_over(false)
+    game_over(false),
+    // block_(Block())
 {
     //input
     

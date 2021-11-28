@@ -15,7 +15,8 @@ private:
     /// Member variables
     ///
     View view_;
-    ge211::Dims<int> screen_dimensions_;
+    Block block_;
+    //ge211::Dims<int> screen_dimensions_;
 
     // explicit Model(Game_config const& config = Game_config());
 
@@ -24,7 +25,7 @@ private:
 
     Game_config const config;
 
-    ge211::Random_source<int> random_x_coor_;     //for assigning coord
+    // ge211::Random_source<int> random_x_coor_;     //for assigning coord
     ge211::Random_source<int> random_life_;     //for assigning
     // random life
     //https://tov.github.io/ge211/classge211_1_1_random__source.html#ab82bd37222911c65a8c9d03a28c986a3
@@ -56,7 +57,7 @@ public:
     explicit Model(Game_config const& config = Game_config());
 
     //for view to use in generating blocks
-    std::vector<std::unique_ptr<Block>>& blocks();
+    std::vector<Block>& get_blocks();
 
     void assign_life();
     void game_over();
