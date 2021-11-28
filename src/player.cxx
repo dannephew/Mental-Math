@@ -3,6 +3,8 @@
 //
 
 #include "player.hxx"
+#include "block.hxx"
+
 Player::Player()
     : num_l1_correct(0),
     num_l2_correct(0),
@@ -26,36 +28,41 @@ Player::Player()
 //+10 for each question once combo begins
 
 void
-Player::calculate_score(Player& player, Block& block) const
+Player::calculate_score(Player& player, Block& block)
 {
     //calls calculate_combo for combo points
     if (answer_history[0] == true && answer_history[1] == true &&
     answer_history[2] == true) {
         //l1 questions
-        if (block.get_block_level(block) == 1) {
+        if (block.get_block_level(Block block) == 1) {
             player.score += 110;
             //l2 questions
-        } else if (block.get_block_level(block) == 2) {
+        } else if (block.get_block_level(Block block) == 2) {
             player.score += 160;
         }
     } else {
         //l1 questions
-        if (block.get_block_level(block) == 1) {
+        if (block.get_block_level(Block block) == 1) {
             player.score += 100;
             //l2 questions
-        } else if (block.get_block_level(block) == 2) {
+        } else if (block.get_block_level(Block block) == 2) {
             player.score += 150;
         }
     }
 }
 
+void
+Player::calculate_total_correct(Player& player)
+{
+    player.total_correct = player.num_l1_correct + player.num_l2_correct;
+}
 
 bool
 Player::correct_answer(Player& player)
 {
     //determines if player.input == block.answer
     //changes player.answer_history
-
+    //changes either num_l1_correct or num_l2_correct
     return false;
 }
 
@@ -64,5 +71,6 @@ Player::get_total_correct(Player& player)
 {
     return player.total_correct;
 }
+
 
 //compare input with block answer

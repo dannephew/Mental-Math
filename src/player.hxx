@@ -27,11 +27,10 @@ public:
     Player();
 
     //need args?
-    void calculate_score(Player& player, Block& block) const;
+    void calculate_score(Player& player, Block& block);
+    void calculate_total_correct(Player& player);
     bool correct_answer(Player& player);
-
     int get_total_correct(Player& player);
-
 
     //create functions to return each data member in class
         //functions should be const bc don't modify data
