@@ -51,9 +51,11 @@ public:
     void launch();
     void on_frame(double dt);
     //From asteroids
-    Model(ge211::Dims<int> screen_dimensions);
+    // Model(ge211::Dims<int> screen_dimensions);
 
-        //for view to use in generating blocks
+    explicit Model(Game_config const& config = Game_config());
+
+    //for view to use in generating blocks
     std::vector<std::unique_ptr<Block>>& blocks();
 
     void assign_life();

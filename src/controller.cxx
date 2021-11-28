@@ -1,10 +1,9 @@
 #include "controller.hxx"
 #include "model.hxx"
 
-Controller::Controller(ge211::Dims<int> screen_dimensions)
-        : model_(screen_dimensions),
-        view_(model_),
-        screen_dimensions_(screen_dimensions)
+Controller::Controller(Model& model)
+        : model_(model),
+        view_(model_)
 { }
 
 void
@@ -26,11 +25,29 @@ Controller::on_frame(double dt)
 }
 
 void
-Controller::on_key(ge211::Key)
+Controller::on_key_up(ge211::Key key)
 {
-    //display the number onto the screen
+
+
+    //std::string input
+        //member of controller
+        //model.handle_input
+            //called when enter is clicked
+
+
+    //on_key, on_key_down, on_key_up
+        //when you type things, it'll return it once
+        //input string: what they're currently typing, which is constantly
+        // modified
+        //when they click enter, trigger handling if it's a solution
+
+        //what if two things have the same solution?
+            //destroy the block closest to the bottom
+
+    char(key.code());
+    //display everything user types onto the screen
     //if user presses delete
-    //if user presses enter, set this as the player_input
+    //if user presses enter, set whatever they typed as the player_input
             //also calls calculate_score()
 
 }

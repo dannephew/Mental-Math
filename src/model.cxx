@@ -4,10 +4,10 @@
 //Gameplay goes here
 //Vectors: https://www.geeksforgeeks.org/vector-in-cpp-stl/
 
-Model::Model(ge211::Dims<int> screen_dimensions)
-    : screen_dimensions_(screen_dimensions),
-      random_x_coor_(0, screen_dimensions_.width),
-      random_life_(0, 60)
+Model::Model(Game_config const& config)
+    : random_x_coor_(0, config.scene_dims.width),
+      random_life_(0, 60),
+      config(config)
 {
     static ge211::Timer t = ge211::Timer();
 
@@ -66,6 +66,7 @@ Model::game_over()
 std::vector<std::unique_ptr<Block>>&
 Model::blocks()
 {
+    //blocks is not vector of unique pointers of blocks
     return blocks_;
 }
 

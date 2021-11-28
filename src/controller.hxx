@@ -8,8 +8,11 @@ class Controller : public ge211::Abstract_game
 {
 public:
     explicit Controller(Model&);
-    Controller(ge211::Dims<int> board_dimensions);
 
+
+
+    // Controller(ge211::Dims<int> screen_dimensions);
+        //controller controls
 
     // Called by ge211 to find out how big to make the window.
     ge211::Dims<int> initial_window_dimensions() const override;
@@ -33,7 +36,7 @@ public:
 
     // Called by ge211 when the user presses a key. We forward the keypress
     // to the model.
-    void on_key(ge211::Key) override;
+    void on_key_up(ge211::Key key) override;
 
 
 

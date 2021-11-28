@@ -7,16 +7,14 @@
 #include <iostream>
 #include<sstream>
 
-Block::Block(Model& model, ge211::Dims<int> screen_dimensions)
+Block::Block(Model model, Game_config game_config)
     : coord(assign_coord()),
-    screen_dimensions_(screen_dimensions),
-    random_x_coor_(0, screen_dimensions_.width),
+    random_x_coor_(0, game_config.scene_dims.width),
     random_life_(0, 60),
     random_operator_(1, 4),
     random_num_l1_(0,9),
     random_num_l2_(0,99),
     block_level(1),
-    config(Game_config()),
     model_(model),
     player_(Player())
 {}
