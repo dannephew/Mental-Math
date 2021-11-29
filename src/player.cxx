@@ -11,11 +11,11 @@ Player::Player()
     total_correct(0),
     lives(3),
     score(0),
-    game_over(false),
+    game_over(false)
     // block_(Block())
 {
     //input
-    
+
 }
 
 //Points can only increase, not decrease
@@ -27,6 +27,12 @@ Player::Player()
     //L2 answers get 1
 //create a list of what correct_answer returns
 //+10 for each question once combo begins
+
+void
+Player::lose_life()
+{
+    lives--;
+}
 
 void
 Player::calculate_score(Player& player, Block& block)
@@ -61,7 +67,7 @@ Player::calculate_total_correct(Player& player)
 bool
 Player::correct_answer(Player& player, Block& block)
 {
-    if ()
+    //if ()
     //determines if player.input == block.answer
     //changes player.answer_history
     //changes either num_l1_correct or num_l2_correct

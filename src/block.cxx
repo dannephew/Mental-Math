@@ -24,11 +24,18 @@ Block::Block(Game_config game_config)
     player_(Player())
 {}
 
-
+//Allows model to change the x-coordinate of a block.
 void
 Block::change_x_coord(float new_x)
 {
     coord.x = new_x;
+}
+
+//True if block hits the bottom.
+bool
+Block::hits_bottom(Game_config config)
+{
+    return coord.y + height > config.scene_dims.height;
 }
 
 void

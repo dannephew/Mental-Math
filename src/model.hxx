@@ -40,7 +40,11 @@ private:
 
     ge211::Random_source<float> random_x_coord;
 
+    Player player;
+
     void assign_coord();
+
+
 
     //block should have velocity
     //model keep block in field somewhere

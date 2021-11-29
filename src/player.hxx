@@ -27,6 +27,7 @@ private:
 public:
     Player();
 
+    void lose_life(); //Decreases lives by 1
     //need args?
     void calculate_score(Player& player, Block& block);
     void calculate_total_correct(Player& player);

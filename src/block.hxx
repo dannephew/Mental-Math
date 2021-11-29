@@ -85,6 +85,7 @@ public:
 
         //Allows model to change x-coord of block
         void change_x_coord(float x);
+        bool hits_bottom(Game_config config);
 
         //Self-explanatory:
         void create_question(Block block);

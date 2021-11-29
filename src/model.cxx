@@ -11,7 +11,8 @@ Model::Model(Game_config const& config)
       config(config),
       //controller_(Controller()), Don't need?
       block_generation_rate(1),
-      random_x_coord(0, config.scene_dims.width - config.block_dims_l1.width)
+      random_x_coord(0, config.scene_dims.width - config.block_dims_l1.width),
+      player(Player())
 {
     static ge211::Timer t = ge211::Timer();
     int elapsed_time = round(t.elapsed_time().seconds());
@@ -23,10 +24,41 @@ Model::Model(Game_config const& config)
     //calls this, which adds a block to blocks_
 }
 
-
+//on_frame: Updates the state of the game for 1 frame.
+//Blocks fall towards the bottom of the screen for all dt
+// CASE 1: A block in blocks_ hits bottom of screen (decrease life)
+// CASE 2: New block has been added to blocks_ (then add new question on screen)
+// CASE 3: Block destroyed by correctly entered answer, aka block taken away
+// from blocks_
+// CASE 4: Player correctly answers block with extra life
+// Might need to add more
+// NOTE: Some cases can happen simultaneously! don't do if-else if atm
 void
 Model::on_frame(double dt)
 {
+    //CASE 1: A block hits bottom of screen (decrease life, remove from blocks_)
+    //Assume bottom-most block on the screen is the last element in blocks_
+    if(blocks_[blocks_.size()-1].hits_bottom(config)){
+        player.lose_life(); //Decrease player lives by 1
+        //Assume that b is at the end of the list, and remove it
+        blocks_.pop_back();
+    }
+    /* IN CASE BLOCK IS NOT at bottom of screen, can continue this part
+    // Check all blocks on screen (i.e. everything in blocks_) if it hits bot
+    for(Block b : blocks_){
+        if(b.hits_bottom(config)){
+            player.lose_life(); //Decrease player lives by 1
+            //Remove from blocks...
+        }
+    }
+    */
+
+    // CASE 2: New block has been added to blocks_
+    // (then add new question on screen)
+    // Check if new block is added by checking a timer.
+
+
+
 
     //Adds block to blocks over time
     // push_back() – It push the elements into a vector from the back
