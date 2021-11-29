@@ -10,10 +10,10 @@
 //Must take game_config as input because game_config must be initialized
 // before random_x_coor_
 Block::Block(Game_config game_config)
-    : coord(assign_coord()),
+    : coord(Position {0,0}),
     width(17),
     height(7),
-    random_x_coor_(0, game_config.scene_dims.width - width),
+    //random_x_coor_(0, game_config.scene_dims.width - width),
     random_life_(0, 60),
     random_operator_(1, 4),
     random_num_l1_(0,9),
@@ -37,12 +37,14 @@ Block::Block(Game_config game_config)
 //
 // }
 
+/*
 Position
 Block::assign_coord()
 {
     int x = random_x_coor_.next();
     return Position(x, 0);
 }
+*/
 
 void
 Block::create_question(Block block)

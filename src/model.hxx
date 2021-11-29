@@ -39,6 +39,8 @@ private:
 
     int block_generation_rate;
 
+    ge211::Random_source<float> random_x_coord;
+
 
     //block should have velocity
     //model keep block in field somewhere

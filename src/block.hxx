@@ -59,7 +59,7 @@ private:
         // };
 
         // ge211::Dims<int> screen_dimensions_;
-        ge211::Random_source<int> random_x_coor_;     //for assigning coord
+        //ge211::Random_source<int> random_x_coor_;     //for assigning coord
 
                 //deleted copy constructor?
         ge211::Random_source<int> random_life_;     //for assigning

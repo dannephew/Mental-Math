@@ -8,31 +8,31 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_audio.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_audio.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_base.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_base.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_color.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_color.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_engine.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_engine.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_error.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_error.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_event.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_event.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_geometry.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_geometry.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_random.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_random.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_render.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_render.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_resource.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_resource.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_session.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_session.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_sprites.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_sprites.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/ge211_window.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_window.cxx.o"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_audio.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_audio.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_base.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_base.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_color.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_color.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_engine.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_engine.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_error.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_error.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_event.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_event.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_geometry.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_geometry.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_random.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_random.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_render.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_render.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_resource.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_resource.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_session.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_session.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_sprites.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_sprites.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/ge211_window.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/ge211/src/CMakeFiles/ge211.dir/ge211_window.cxx.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "GE211_RESOURCES=\"/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/../Resources/\",\"/usr/local/share/ge211/\""
+  "GE211_RESOURCES=\"C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/src/../Resources/\",\"C:/Program Files (x86)/game/share/ge211/\""
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../.cs211/lib/ge211/src/../include"
-  "/usr/local/include/SDL2"
+  "C:/MinGW/include/SDL2"
   "../.cs211/lib/ge211/3rdparty/utf8-cpp/include"
   )
 

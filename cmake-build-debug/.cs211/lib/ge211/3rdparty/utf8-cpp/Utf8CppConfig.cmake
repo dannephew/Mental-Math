@@ -49,7 +49,7 @@ unset(_expectedTargets)
 add_library(utf8-cpp INTERFACE IMPORTED)
 
 set_target_properties(utf8-cpp PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/3rdparty/utf8-cpp/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/ge211/3rdparty/utf8-cpp/include"
 )
 
 # This file does not depend on other imported targets which have

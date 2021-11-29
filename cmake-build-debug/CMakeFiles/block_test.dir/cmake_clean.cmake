@@ -1,11 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/block_test.dir/src/block.cxx.o"
-  "CMakeFiles/block_test.dir/src/game_config.cxx.o"
-  "CMakeFiles/block_test.dir/src/model.cxx.o"
-  "CMakeFiles/block_test.dir/src/player.cxx.o"
-  "CMakeFiles/block_test.dir/test/block_test.cxx.o"
-  "block_test"
+  "CMakeFiles/block_test.dir/src/block.cxx.obj"
+  "CMakeFiles/block_test.dir/src/game_config.cxx.obj"
+  "CMakeFiles/block_test.dir/src/model.cxx.obj"
+  "CMakeFiles/block_test.dir/src/player.cxx.obj"
+  "CMakeFiles/block_test.dir/test/block_test.cxx.obj"
+  "block_test.exe"
+  "block_test.exe.manifest"
   "block_test.pdb"
+  "libblock_test.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

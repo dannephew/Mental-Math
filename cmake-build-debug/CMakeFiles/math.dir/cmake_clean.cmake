@@ -1,12 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/math.dir/src/block.cxx.o"
-  "CMakeFiles/math.dir/src/controller.cxx.o"
-  "CMakeFiles/math.dir/src/game_config.cxx.o"
-  "CMakeFiles/math.dir/src/main.cxx.o"
-  "CMakeFiles/math.dir/src/model.cxx.o"
-  "CMakeFiles/math.dir/src/player.cxx.o"
-  "CMakeFiles/math.dir/src/view.cxx.o"
-  "math"
+  "CMakeFiles/math.dir/src/block.cxx.obj"
+  "CMakeFiles/math.dir/src/controller.cxx.obj"
+  "CMakeFiles/math.dir/src/game_config.cxx.obj"
+  "CMakeFiles/math.dir/src/main.cxx.obj"
+  "CMakeFiles/math.dir/src/model.cxx.obj"
+  "CMakeFiles/math.dir/src/player.cxx.obj"
+  "CMakeFiles/math.dir/src/view.cxx.obj"
+  "libmath.dll.a"
+  "math.exe"
+  "math.exe.manifest"
   "math.pdb"
 )
 

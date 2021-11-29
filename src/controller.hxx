@@ -10,7 +10,6 @@ public:
     explicit Controller(Model&);
 
 
-
     // Controller(ge211::Dims<int> screen_dimensions);
         //controller controls
 

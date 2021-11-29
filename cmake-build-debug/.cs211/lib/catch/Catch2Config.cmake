@@ -46,14 +46,14 @@ add_library(catch STATIC IMPORTED)
 
 set_target_properties(catch PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/catch/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carol/Documents/GitHub/Mental-Math/.cs211/lib/catch/include"
 )
 
 # Import target "catch" for configuration "Debug"
 set_property(TARGET catch APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(catch PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/libcatch.a"
+  IMPORTED_LOCATION_DEBUG "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/catch/libcatch.a"
   )
 
 # This file does not depend on other imported targets which have

@@ -3,7 +3,7 @@
 
 Controller::Controller(Model& model)
         : model_(model),
-        view_(model)
+          view_(model)
         //not recognizing as member variables
 { }
     //issue

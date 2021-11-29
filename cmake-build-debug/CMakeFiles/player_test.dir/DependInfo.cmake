@@ -8,13 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/player_test.dir/src/block.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/player_test.dir/src/game_config.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/player_test.dir/src/model.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/player_test.dir/src/player.cxx.o"
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/player_test.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/player_test.dir/test/player_test.cxx.o"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/src/block.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/CMakeFiles/player_test.dir/src/block.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/src/game_config.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/CMakeFiles/player_test.dir/src/game_config.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/src/model.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/CMakeFiles/player_test.dir/src/model.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/src/player.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/CMakeFiles/player_test.dir/src/player.cxx.obj"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/test/player_test.cxx" "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/CMakeFiles/player_test.dir/test/player_test.cxx.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
@@ -33,7 +33,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/DependInfo.cmake"
+  "C:/Users/carol/Documents/GitHub/Mental-Math/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
