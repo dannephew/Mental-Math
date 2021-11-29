@@ -38,7 +38,7 @@ private:
 
     int block_generation_rate;
 
-    ge211::Random_source<float> random_x_coord;
+
 
     Player player;
 
@@ -65,6 +65,8 @@ public:
 
     //Inspired by HW5
     explicit Model(Game_config const& config = Game_config());
+
+    ge211::Random_source<float> random_x_coord;
 
     //For view to use in generating blocks (inspired by Asteroids):
     std::vector<Block>& get_blocks();

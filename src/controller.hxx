@@ -45,7 +45,7 @@ public:
         // is loaded
 
 private:
-    Model model_;
+    Model& model_;
     View view_;
     // Loads every single number typed into the view.
     void load_num_();

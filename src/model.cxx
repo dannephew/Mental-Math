@@ -11,8 +11,9 @@ Model::Model(Game_config const& config)
       config(config),
       //controller_(Controller()), Don't need?
       block_generation_rate(1),
-      random_x_coord(0, config.scene_dims.width - config.block_dims_l1.width),
-      player(Player())
+      player(Player()),
+      random_x_coord(0, config.scene_dims.width - config.block_dims_l1.width)
+
 {
     static ge211::Timer t = ge211::Timer();
     int elapsed_time = round(t.elapsed_time().seconds());
