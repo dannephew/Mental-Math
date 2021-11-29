@@ -25,7 +25,7 @@ View::View(Model const& model)
         block_sprite({block.width, block.height}, blue_color),
           text_box_sprite({config.scene_dims.width, config.scene_dims
           .height/5}, blue_color),
-        player_input()
+          controller_(Controller())
 //     ge211::Text_sprite const player_input;
 //     ge211::Circle_sprite const life_sprite;
 //

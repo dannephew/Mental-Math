@@ -3,6 +3,7 @@
 #include "model.hxx"
 #include "block.hxx"
 #include "game_config.hxx"
+#include "controller.hxx"
 
 class View
 {
@@ -20,6 +21,7 @@ private:
     Model const& model_;
     Game_config const config;
     Block block_;
+    Controller controller_;
 
     //During gameplay:
     ge211::Rectangle_sprite const block_sprite;
