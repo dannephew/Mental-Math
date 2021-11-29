@@ -19,7 +19,7 @@
 ///       float x;   // pixel distance from left edge of window
 ///       float y;   // pixel distance from top edge of window
 ///   };
-using Position = ge211::Posn<float>;
+using Position = ge211::Posn<int>;
 
 ///   struct Velocity
 ///   {

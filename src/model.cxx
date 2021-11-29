@@ -37,7 +37,8 @@ Model::Model(Game_config const& config)
 // CASE 3: Block destroyed by correctly entered answer, aka block taken away
 // from blocks_
 // CASE 4: Player correctly answers block with extra life
-// Might need to add more
+// CASE 5: Player correctly answers 10 l1 questions, which means all blocks
+// must become l2
 // NOTE: Some cases can happen simultaneously! don't do if-else if atm
 void
 Model::on_frame(double dt)
@@ -72,10 +73,18 @@ Model::on_frame(double dt)
         ///2. Complete Player::correct_answer(), which compares user input to
         /// each block's answer
 
-    // CASE 4: Player correctly answers block with extra life
+    /// CASE 4: Player correctly answers block with extra life
+        ///In order to accomplish this, following must be completed:
+        ///1. Uncomment random_life variable in block.cxx
+        ///2. Create assign_life(), which should:
+            ///Generate a random_life number between 0-60 (bc 60 sec/min)
+            ///The next block that gets generated after that second gets
+            /// assigned a life
+        ///3. Use player.add_life()
+
 
     ///At every instance:
-    //Move every b in blocks_ forward based on dt
+    ///Move every b in blocks_ forward based on dt
     for (Block& b : blocks_) {
         b.next(dt, b);
     }
@@ -111,11 +120,11 @@ Model::game_over()
 }
 
 //Important for view
-std::vector<Block>&
-Model::get_blocks()
+std::vector<Block>
+Model::get_blocks() const
 {
     //blocks is not vector of unique pointers of blocks
-    return blocks_;
+    return (blocks_);
 }
 
 // void

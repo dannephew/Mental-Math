@@ -37,9 +37,12 @@ View::View(Model const& model)
 { }
 
 void
+//View::draw(ge211::Sprite_set&)
 View::draw(ge211::Sprite_set& set)
 {
-    // This needs to do something!
+    for (Block b : model_.get_blocks()) {
+        set.add_sprite(block_sprite, b.get_coord(b));
+    }
 }
 //draw everything model tells it to
 
@@ -54,6 +57,8 @@ View::initial_window_dimensions() const
 {
     return config.scene_dims;
 }
+
+
 
 void
 View::load_num()

@@ -68,7 +68,7 @@ public:
     explicit Model(Game_config const& config = Game_config());
 
     //For view to use in generating blocks (inspired by Asteroids):
-    std::vector<Block>& get_blocks();
+    std::vector<Block> get_blocks() const;
 
     //Assigns a life to a random block every minute:
     void assign_life();

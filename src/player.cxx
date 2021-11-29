@@ -80,5 +80,11 @@ Player::get_total_correct(Player& player)
     return player.total_correct;
 }
 
+void
+Player::add_life()
+{
+    lives++;
+}
+
 
 //compare input with block answer
