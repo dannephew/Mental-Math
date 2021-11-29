@@ -7,10 +7,12 @@
 #include <iostream>
 #include<sstream>
 
+//Must take game_config as input because game_config must be initialized
+// before random_x_coor_
 Block::Block(Game_config game_config)
     : coord(assign_coord()),
-    width(10),
-    height(5),
+    width(17),
+    height(7),
     random_x_coor_(0, game_config.scene_dims.width - width),
     random_life_(0, 60),
     random_operator_(1, 4),
@@ -18,9 +20,22 @@ Block::Block(Game_config game_config)
     random_num_l2_(0,99),
     block_level(1),
     player_(Player())
-{
-}
+{}
 
+// Block::Block()
+//     : coord(assign_coord()),
+//       width(10),
+//       height(5),
+//       random_x_coor_(0, game_config.scene_dims.width - width),
+//       random_life_(0, 60),
+//       random_operator_(1, 4),
+//       random_num_l1_(0,9),
+//       random_num_l2_(0,99),
+//       block_level(1),
+//       player_(Player())
+// {
+//
+// }
 
 Position
 Block::assign_coord()
@@ -85,8 +100,8 @@ std::string
 Block::get_question(Block block)
 {
     std::string s = "";
-    for (i=0; i < 2; i++) {
-        s += block.question[i];
+    for (int i=0; i < 2; i++) {
+        s = s + block.question[i];
     }
     return s;
 }
@@ -103,6 +118,7 @@ Block::advance_level(Block block)
     if (block.block_level == 1) {
         block.block_level += 1;
     }
+    block.height = 12;
     //update height and width
 }
 
@@ -111,6 +127,7 @@ Block::get_block_level(Block block)
 {
     return block.block_level;
 }
+
 
 
 // Block::block_level

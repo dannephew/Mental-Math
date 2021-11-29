@@ -35,12 +35,13 @@ struct Game_config
 
 
     // The dimensions of each block
-    ge211::Dims<int> l1_block_dims;
-    ge211::Dims<int> l2_block_dims;
+    // ge211::Dims<int> l1_block_dims;
+    // ge211::Dims<int> l2_block_dims;
 
     int num_lives;
     int num_l1;     // Number of L1 questions before L2 begins
 
+    void increase_block_generation();
 };
 
 #endif //GAME_GAME_CONFIG_HXX

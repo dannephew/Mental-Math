@@ -5,7 +5,10 @@
 #include "game_config.hxx"
 #include "view.hxx"
 #include "player.hxx"
+#include "controller.hxx"
 #include <vector>
+#include <iostream>
+#include <string>
 
 class Model
 {
@@ -22,7 +25,7 @@ private:
 
     //From asteroids: to create a vector of blocks
     std::vector<Block> blocks_;
-
+    Controller const controller_;
     Game_config const config;
 
     // ge211::Random_source<int> random_x_coor_;     //for assigning coord
@@ -34,6 +37,7 @@ private:
 
     // Block block_level_   = Block::block_level::l1;
 
+    int block_generation_rate;
 
 
     //block should have velocity
@@ -48,20 +52,30 @@ private:
     //increasing velocity over time
 public:
     // Model();
-    void new_block();
-    void launch();
-    void on_frame(double dt);
-    //From asteroids
-    // Model(ge211::Dims<int> screen_dimensions);
+    // void new_block();
+    // void launch();
 
+    void on_frame(double dt);
+
+    //Inspired by HW5
     explicit Model(Game_config const& config = Game_config());
 
-    //for view to use in generating blocks
+    //For view to use in generating blocks (inspired by Asteroids):
     std::vector<Block>& get_blocks();
 
+    //Assigns a life to a random block every minute:
     void assign_life();
+
+    //Compares player_input against every block's answer in blocks
+    bool correct_answer();
+
+
+    //Destroys all blocks
+    //Maybe tells view to render the endgame screen
     void game_over();
-    void advance_level();      //go from l1 to l2
+
+
+    // void advance_level();      //go from l1 to l2
 
     ///Member functions
     //Assigns the coordinates for a block
@@ -69,8 +83,10 @@ public:
     void assign_coord(Block block);
     bool destroy_block(Block block);
     bool hits_bottom(Block block) const;
-    Position current_position();    //use in view.draw() to get the
-    // position of each block
+
+
+    // Position current_position();    //use in view.draw() to get the
+    // // position of each block
     //Blocks vector
 
     //calculates answer to block.question and changes block.answer

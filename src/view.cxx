@@ -4,10 +4,36 @@
 //Text sprite Documentation: https://tov.github
 // .io/ge211/classge211_1_1sprites_1_1_text__sprite.html
 
+//For background
+    //Red can also be used for life_sprite
+static ge211::Color const red_color {255, 0, 0};
+static ge211::Color const pink_color {128, 0, 0};
+static ge211::Color const white_color {255, 255, 255};
+
+//For blocks and text box
+    //Specs don't specify that we should display score during gameplay, btw.
+static ge211::Color const blue_color {0, 0, 100};
+
+//For text
+static ge211::Color const black_color {0, 0, 100};
+
 
 View::View(Model const& model)
         : model_(model),
-
+        config(Game_config()),
+        block(Block()),
+        block_sprite({block.width, block.height}, blue_color),
+          text_box_sprite({config.scene_dims.width, config.scene_dims
+          .height/5}, blue_color),
+        player_input()
+//     ge211::Text_sprite const player_input;
+//     ge211::Circle_sprite const life_sprite;
+//
+//
+//     //During endgame:
+//     ge211::Rectangle_sprite const end_game_sprite;
+//     ge211::Rectangle_sprite const replay_button_sprite;
+//     ge211::Text_sprite const replay_sprite;
 { }
 
 void

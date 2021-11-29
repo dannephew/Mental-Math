@@ -30,7 +30,9 @@ public:
     //need args?
     void calculate_score(Player& player, Block& block);
     void calculate_total_correct(Player& player);
-    bool correct_answer(Player& player);
+    bool correct_answer(Player& player, Block& block);
+
+    //To retrieve in other files
     int get_total_correct(Player& player);
 
     //create functions to return each data member in class

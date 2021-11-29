@@ -74,16 +74,23 @@ private:
 
 public:
         ///Constructors
-        //Block();
+        Block();
         explicit Block(Game_config);
         // Block(Position coord);
 
+        //Changes a block to a L2 block
+        //Updates height, width, and block_level
         void advance_level(Block block);
+
+        //Self-explanatory:
         void create_question(Block block);
         void create_operator(Block block);
         void calculate_answer(Block block);
+
+        //Returns a random x coord and a 0 y coord
         Position assign_coord();
 
+        //For retrieving block data members in other files:
         Position get_coord(Block block);
         int get_width(Block block);
         int get_height(Block block);

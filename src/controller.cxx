@@ -29,7 +29,13 @@ Controller::on_frame(double dt)
 void
 Controller::on_key_up(ge211::Key key)
 {
-
+    //Double check that '/r' is the Enter key
+    while (key != ge211::Key::code('/r')) {
+        player_input = player_input + char(key.code());
+    }
+    if (key == ge211::Key::code('/r')) {
+        //check if answer matches any of the answers in the block
+    }
 
     //std::string input
         //member of controller
@@ -46,7 +52,7 @@ Controller::on_key_up(ge211::Key key)
         //what if two things have the same solution?
             //destroy the block closest to the bottom
 
-    char(key.code());
+    // char(key.code());
     //display everything user types onto the screen
     //if user presses delete
     //if user presses enter, set whatever they typed as the player_input
@@ -76,4 +82,10 @@ void
 Controller::on_start()
 {
     return;
+}
+
+std::string
+Controller::get_player_input()
+{
+    return player_input;
 }

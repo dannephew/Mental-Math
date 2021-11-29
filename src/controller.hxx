@@ -38,7 +38,7 @@ public:
     // to the model.
     void on_key_up(ge211::Key key) override;
 
-
+    std::string get_player_input();
 
     //start playing the game by clicking the screen
     // void on_mouse_up(ge211::Mouse_button, ge211::Posn<int>) override;
@@ -50,6 +50,7 @@ private:
     View view_;
     // Loads every single number typed into the view.
     void load_num_();
+    std::string player_input;
 
         //Purpose?
     ge211::Dims<int> screen_dimensions_;

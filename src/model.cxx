@@ -7,14 +7,18 @@
 Model::Model(Game_config const& config)
     : random_life_(0, 60),
       config(config),
-      block_(Block(config))
+      controller_(Controller()),
+      block_(Block(config)),
+      block_generation_rate(1)
 {
     static ge211::Timer t = ge211::Timer();
-    if (t.elapsed_time().seconds() % 60 == 0) {
-
+    int elapsed_time = round(t.elapsed_time().seconds());
+    if (elapsed_time % (60 / block_generation_rate) == 0) {
+        Block b = Block(config);
+        block_generation_rate += 1;
     }
+    //change block_generation_rate every minute
     //calls this, which adds a block to blocks_
-    new_block();
 }
 
 
@@ -121,16 +125,22 @@ Model::hits_bottom(Block block) const
     return false;
 }
 
-Position
-Model::current_position()
-{
-    return Position(0, 0);
-}
+// Position
+// Model::current_position()
+// {
+//     return Position(0, 0);
+// }
 
 int
 Model::calculate_answer(Block block)
 {
     return 0;
+}
+
+bool
+Model::correct_answer()
+{
+    return false;
 }
 
 // void
