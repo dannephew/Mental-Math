@@ -89,6 +89,11 @@ public:
         void change_x_coord(float x);
         bool hits_bottom(Game_config config);
 
+
+        //Same as next() in HW5:
+        Block next(double dt, Block block) const;
+
+
         //Self-explanatory:
         void create_question(Block block);
         void create_operator(Block block);

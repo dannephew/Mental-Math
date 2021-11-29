@@ -72,6 +72,14 @@ Block::calculate_answer(Block block)
     }
 }
 
+Block
+Block::next(double dt, Block block) const
+{
+    block.coord.x += block.velocity.width*dt;
+    block.coord.y += block.velocity.height*dt;
+    return block;
+}
+
 
 Position
 Block::get_coord(Block block)
@@ -117,6 +125,7 @@ Block::get_block_level(Block block)
 {
     return block.block_level;
 }
+
 
 
 

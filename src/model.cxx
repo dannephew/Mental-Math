@@ -1,5 +1,8 @@
 #include "model.hxx"
 
+//1. Create blocks_
+//2. In on_frame: make blocks fall according to Timer
+//2. In View: display blocks
 
 //Gameplay goes here
 //Vectors: https://www.geeksforgeeks.org/vector-in-cpp-stl/
@@ -19,6 +22,8 @@ Model::Model(Game_config const& config)
     int elapsed_time = round(t.elapsed_time().seconds());
     if (elapsed_time % (60 / block_generation_rate) == 0) {
         Block b = Block(config);
+        //add this to blocks_
+        blocks_.push_back(b);
         block_generation_rate += 1;
     }
     //change block_generation_rate every minute
@@ -53,6 +58,7 @@ Model::on_frame(double dt)
         }
     }
     */
+
 
     // CASE 2: New block has been added to blocks_
     // (then add new question on screen)
