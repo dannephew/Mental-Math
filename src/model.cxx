@@ -5,10 +5,11 @@
 //Vectors: https://www.geeksforgeeks.org/vector-in-cpp-stl/
 
 Model::Model(Game_config const& config)
-    : random_life_(0, 60),
+    : block_(Block(config)), //Block to be pushed into blocks
+      blocks_(std::vector<Block> {block_}),
+      //random_life_(0, 60),
       config(config),
-      controller_(Controller()),
-      //block_(Block(config)),
+      //controller_(Controller()), Don't need?
       block_generation_rate(1),
       random_x_coord(0, config.scene_dims.width - config.block_dims_l1.width)
 {
@@ -28,30 +29,19 @@ Model::on_frame(double dt)
 {
 
     //Adds block to blocks over time
-        // push_back() – It push the elements into a vector from the back
+    // push_back() – It push the elements into a vector from the back
     //Compares player's answer to the answer of every block
 
     //    Block b = Block(config.side_margin, config.top_margin, config.brick_dims().width, config.brick_dims().height);
-
-
-
+    //
 }
 
-
-////Don't need launch() for now because game begins automatically
-////Revisit later
-// void
-// Model::launch()
-// {
-//     //    lives(0),
-//     //     score(0),
-//     //     game_over(true)
-//     //what should be activated on launch?
-//     player.lives = 3;
-//     player.game_over = false;
-//
-//
-// }
+void
+Model::assign_coord()
+{
+    //Change x-coord of block_ to be added to blocks_
+    block_.change_x_coord(random_x_coord.next());
+}
 
 void
 Model::assign_life()

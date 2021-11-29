@@ -17,23 +17,22 @@ private:
     ///
     /// Member variables
     ///
-    View view_;
     Block block_;
     //ge211::Dims<int> screen_dimensions_;
 
     // explicit Model(Game_config const& config = Game_config());
 
-    //From asteroids: to create a vector of blocks
+    //From asteroids: to create a vector of blocks (currently on screen)
     std::vector<Block> blocks_;
-    Controller const controller_;
+    //Controller const controller_; Don't need?
     Game_config const config;
 
     // ge211::Random_source<int> random_x_coor_;     //for assigning coord
-    ge211::Random_source<int> random_life_;     //for assigning
+    //ge211::Random_source<int> random_life_;     //for assigning
     // random life
     //https://tov.github.io/ge211/classge211_1_1_random__source.html#ab82bd37222911c65a8c9d03a28c986a3
 
-    static ge211::Timer time_game();
+    //static ge211::Timer time_game();
 
     // Block block_level_   = Block::block_level::l1;
 
@@ -41,6 +40,7 @@ private:
 
     ge211::Random_source<float> random_x_coord;
 
+    void assign_coord();
 
     //block should have velocity
     //model keep block in field somewhere
@@ -82,7 +82,7 @@ public:
     ///Member functions
     //Assigns the coordinates for a block
     //y coordinate is always 0; x coordinate is randomized
-    void assign_coord(Block block);
+    //void assign_coord(Block block);
     bool destroy_block(Block block);
     bool hits_bottom(Block block) const;
 

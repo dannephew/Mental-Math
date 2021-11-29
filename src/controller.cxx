@@ -60,12 +60,6 @@ Controller::on_key_up(ge211::Key key)
 
 }
 
-// void
-// Controller::on_mouse_up(ge211::Mouse_button, ge211::Posn<int>)
-// {
-//     model_.launch();
-// }
-
 ge211::Dims<int>
 Controller::initial_window_dimensions() const
 {
@@ -76,12 +70,6 @@ void
 Controller::load_num_()
 {
     view_.load_num()
-}
-
-void
-Controller::on_start()
-{
-    return;
 }
 
 std::string

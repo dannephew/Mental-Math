@@ -61,12 +61,13 @@ private:
         // ge211::Dims<int> screen_dimensions_;
         //ge211::Random_source<int> random_x_coor_;     //for assigning coord
 
+        /*
                 //deleted copy constructor?
-        ge211::Random_source<int> random_life_;     //for assigning
-    // random life
+        ge211::Random_source<int> random_life_;     //for assigning random life
         ge211::Random_source<int> random_num_l1_;
         ge211::Random_source<int> random_num_l2_;
         ge211::Random_source<int> random_operator_;
+        */
         Game_config const config;
 
         // Model& model_;
@@ -74,7 +75,7 @@ private:
 
 public:
         ///Constructors
-        Block();
+        //Block();
         explicit Block(Game_config);
         // Block(Position coord);
 
@@ -82,13 +83,16 @@ public:
         //Updates height, width, and block_level
         void advance_level(Block block);
 
+        //Allows model to change x-coord of block
+        void change_x_coord(float x);
+
         //Self-explanatory:
         void create_question(Block block);
         void create_operator(Block block);
         void calculate_answer(Block block);
 
         //Returns a random x coord and a 0 y coord
-        Position assign_coord();
+        //Position assign_coord(); MOVED TO model files
 
         //For retrieving block data members in other files:
         Position get_coord(Block block);

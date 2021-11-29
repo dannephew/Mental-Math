@@ -14,37 +14,22 @@ Block::Block(Game_config game_config)
     width(17),
     height(7),
     //random_x_coor_(0, game_config.scene_dims.width - width),
+    /*
     random_life_(0, 60),
     random_operator_(1, 4),
     random_num_l1_(0,9),
     random_num_l2_(0,99),
+    */
     block_level(1),
     player_(Player())
 {}
 
-// Block::Block()
-//     : coord(assign_coord()),
-//       width(10),
-//       height(5),
-//       random_x_coor_(0, game_config.scene_dims.width - width),
-//       random_life_(0, 60),
-//       random_operator_(1, 4),
-//       random_num_l1_(0,9),
-//       random_num_l2_(0,99),
-//       block_level(1),
-//       player_(Player())
-// {
-//
-// }
 
-/*
-Position
-Block::assign_coord()
+void
+Block::change_x_coord(float new_x)
 {
-    int x = random_x_coor_.next();
-    return Position(x, 0);
+    coord.x = new_x;
 }
-*/
 
 void
 Block::create_question(Block block)
