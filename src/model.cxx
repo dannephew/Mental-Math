@@ -44,10 +44,12 @@ Model::on_frame(double dt)
 {
     //CASE 1: A block hits bottom of screen (decrease life, remove from blocks_)
     //Assume bottom-most block on the screen is the last element in blocks_
-    if(blocks_[blocks_.size()-1].hits_bottom(config)){
+            ///bottom-most block should be the first element in blocks_
+            /// (check Model::Model for how blocks_ is created)
+    if(blocks_[0].hits_bottom(config)){
         player.lose_life(); //Decrease player lives by 1
         //Assume that b is at the end of the list, and remove it
-        blocks_.pop_back();
+        destroy_block(blocks_[0]);
     }
     /* IN CASE BLOCK IS NOT at bottom of screen, can continue this part
     // Check all blocks on screen (i.e. everything in blocks_) if it hits bot
@@ -59,20 +61,24 @@ Model::on_frame(double dt)
     }
     */
 
-
-    // CASE 2: New block has been added to blocks_
-    // (then add new question on screen)
+    // CASE 2: New block has been added to blocks_ from Model::Model
+    // (then add new question on screen through View)
     // Check if new block is added by checking a timer.
+        ///Potentially unnecessary?
 
+    ///CASE 3: Check whether player entered a correct answer
+        ///In order to accomplish this, following must be completed:
+        ///1. Collect user input in controller
+        ///2. Complete Player::correct_answer(), which compares user input to
+        /// each block's answer
 
+    // CASE 4: Player correctly answers block with extra life
 
-
-    //Adds block to blocks over time
-    // push_back() – It push the elements into a vector from the back
-    //Compares player's answer to the answer of every block
-
-    //    Block b = Block(config.side_margin, config.top_margin, config.brick_dims().width, config.brick_dims().height);
-    //
+    ///At every instance:
+    //Move every b in blocks_ forward based on dt
+    for (Block& b : blocks_) {
+        b.next(dt, b);
+    }
 }
 
 void
@@ -97,7 +103,7 @@ Model::assign_life()
 void
 Model::game_over()
 {
-    //If game over is true, then this function is called
+    //If game over is true:
     //Must:
         //block_vector.clear()
         //Tell view to display game over screen
@@ -112,21 +118,21 @@ Model::get_blocks()
     return blocks_;
 }
 
-void
-Model::new_block()
-{
-    int x = random_x_coor_.next();
-
-
-    //creates new block
-
-        //NOT TRUE DONT USE:
-        //make_unique creates a unique pointer to the block object
-        //because .push_back() requires a pointer as an input
-    //blocks.push_back(std::make_unique<Block>(
-    // )
-
-}
+// void
+// Model::new_block()
+// {
+//     int x = random_x_coor_.next();
+//
+//
+//     //creates new block
+//
+//         //NOT TRUE DONT USE:
+//         //make_unique creates a unique pointer to the block object
+//         //because .push_back() requires a pointer as an input
+//     //blocks.push_back(std::make_unique<Block>(
+//     // )
+//
+// }
 
 
 
@@ -138,6 +144,7 @@ Model::destroy_block(Block block)
     for (Block& b : blocks_) {
         if (hits_bottom(b) == true) {
             b = blocks_.back();
+            ////////
             blocks_.pop_back();
             return true;
         }
