@@ -98,6 +98,26 @@ list_install_components:
 list_install_components/fast: list_install_components
 .PHONY : list_install_components/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -119,26 +139,6 @@ test:
 # Special rule for the target test
 test/fast: test
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -172,6 +172,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named block_test
+
+# Build rule for target.
+block_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 block_test
+.PHONY : block_test
+
+# fast build rule for target.
+block_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/build
+.PHONY : block_test/fast
+
+#=============================================================================
+# Target rules for targets named math
+
+# Build rule for target.
+math: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 math
+.PHONY : math
+
+# fast build rule for target.
+math/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/build
+.PHONY : math/fast
+
+#=============================================================================
 # Target rules for targets named model_test
 
 # Build rule for target.
@@ -185,17 +211,17 @@ model_test/fast:
 .PHONY : model_test/fast
 
 #=============================================================================
-# Target rules for targets named game
+# Target rules for targets named player_test
 
 # Build rule for target.
-game: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
-.PHONY : game
+player_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 player_test
+.PHONY : player_test
 
 # fast build rule for target.
-game/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-.PHONY : game/fast
+player_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/build
+.PHONY : player_test/fast
 
 #=============================================================================
 # Target rules for targets named catch
@@ -241,7 +267,10 @@ src/block.o: src/block.cxx.o
 
 # target to build an object file
 src/block.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/block.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/block.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/block.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/block.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/block.cxx.o
 .PHONY : src/block.cxx.o
 
 src/block.i: src/block.cxx.i
@@ -249,7 +278,10 @@ src/block.i: src/block.cxx.i
 
 # target to preprocess a source file
 src/block.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/block.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/block.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/block.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/block.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/block.cxx.i
 .PHONY : src/block.cxx.i
 
 src/block.s: src/block.cxx.s
@@ -257,7 +289,10 @@ src/block.s: src/block.cxx.s
 
 # target to generate assembly for a file
 src/block.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/block.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/block.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/block.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/block.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/block.cxx.s
 .PHONY : src/block.cxx.s
 
 src/controller.o: src/controller.cxx.o
@@ -265,7 +300,7 @@ src/controller.o: src/controller.cxx.o
 
 # target to build an object file
 src/controller.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/controller.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/controller.cxx.o
 .PHONY : src/controller.cxx.o
 
 src/controller.i: src/controller.cxx.i
@@ -273,7 +308,7 @@ src/controller.i: src/controller.cxx.i
 
 # target to preprocess a source file
 src/controller.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/controller.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/controller.cxx.i
 .PHONY : src/controller.cxx.i
 
 src/controller.s: src/controller.cxx.s
@@ -281,7 +316,7 @@ src/controller.s: src/controller.cxx.s
 
 # target to generate assembly for a file
 src/controller.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/controller.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/controller.cxx.s
 .PHONY : src/controller.cxx.s
 
 src/game_config.o: src/game_config.cxx.o
@@ -289,7 +324,10 @@ src/game_config.o: src/game_config.cxx.o
 
 # target to build an object file
 src/game_config.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_config.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/game_config.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/game_config.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/game_config.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/game_config.cxx.o
 .PHONY : src/game_config.cxx.o
 
 src/game_config.i: src/game_config.cxx.i
@@ -297,7 +335,10 @@ src/game_config.i: src/game_config.cxx.i
 
 # target to preprocess a source file
 src/game_config.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_config.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/game_config.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/game_config.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/game_config.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/game_config.cxx.i
 .PHONY : src/game_config.cxx.i
 
 src/game_config.s: src/game_config.cxx.s
@@ -305,7 +346,10 @@ src/game_config.s: src/game_config.cxx.s
 
 # target to generate assembly for a file
 src/game_config.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_config.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/game_config.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/game_config.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/game_config.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/game_config.cxx.s
 .PHONY : src/game_config.cxx.s
 
 src/main.o: src/main.cxx.o
@@ -313,7 +357,7 @@ src/main.o: src/main.cxx.o
 
 # target to build an object file
 src/main.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/main.cxx.o
 .PHONY : src/main.cxx.o
 
 src/main.i: src/main.cxx.i
@@ -321,7 +365,7 @@ src/main.i: src/main.cxx.i
 
 # target to preprocess a source file
 src/main.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/main.cxx.i
 .PHONY : src/main.cxx.i
 
 src/main.s: src/main.cxx.s
@@ -329,7 +373,7 @@ src/main.s: src/main.cxx.s
 
 # target to generate assembly for a file
 src/main.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/main.cxx.s
 .PHONY : src/main.cxx.s
 
 src/model.o: src/model.cxx.o
@@ -337,8 +381,10 @@ src/model.o: src/model.cxx.o
 
 # target to build an object file
 src/model.cxx.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/model.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/model.cxx.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/model.cxx.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/model.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/model.cxx.o
 .PHONY : src/model.cxx.o
 
 src/model.i: src/model.cxx.i
@@ -346,8 +392,10 @@ src/model.i: src/model.cxx.i
 
 # target to preprocess a source file
 src/model.cxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/model.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/model.cxx.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/model.cxx.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/model.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/model.cxx.i
 .PHONY : src/model.cxx.i
 
 src/model.s: src/model.cxx.s
@@ -355,8 +403,10 @@ src/model.s: src/model.cxx.s
 
 # target to generate assembly for a file
 src/model.cxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/model.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/model.cxx.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/model.cxx.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/model.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/model.cxx.s
 .PHONY : src/model.cxx.s
 
 src/player.o: src/player.cxx.o
@@ -364,7 +414,10 @@ src/player.o: src/player.cxx.o
 
 # target to build an object file
 src/player.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/player.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/player.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/player.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/player.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/player.cxx.o
 .PHONY : src/player.cxx.o
 
 src/player.i: src/player.cxx.i
@@ -372,7 +425,10 @@ src/player.i: src/player.cxx.i
 
 # target to preprocess a source file
 src/player.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/player.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/player.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/player.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/player.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/player.cxx.i
 .PHONY : src/player.cxx.i
 
 src/player.s: src/player.cxx.s
@@ -380,7 +436,10 @@ src/player.s: src/player.cxx.s
 
 # target to generate assembly for a file
 src/player.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/player.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/src/player.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/player.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/player.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/src/player.cxx.s
 .PHONY : src/player.cxx.s
 
 src/view.o: src/view.cxx.o
@@ -388,7 +447,7 @@ src/view.o: src/view.cxx.o
 
 # target to build an object file
 src/view.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/view.cxx.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/view.cxx.o
 .PHONY : src/view.cxx.o
 
 src/view.i: src/view.cxx.i
@@ -396,7 +455,7 @@ src/view.i: src/view.cxx.i
 
 # target to preprocess a source file
 src/view.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/view.cxx.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/view.cxx.i
 .PHONY : src/view.cxx.i
 
 src/view.s: src/view.cxx.s
@@ -404,8 +463,32 @@ src/view.s: src/view.cxx.s
 
 # target to generate assembly for a file
 src/view.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/view.cxx.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/view.cxx.s
 .PHONY : src/view.cxx.s
+
+test/block_test.o: test/block_test.cxx.o
+.PHONY : test/block_test.o
+
+# target to build an object file
+test/block_test.cxx.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/test/block_test.cxx.o
+.PHONY : test/block_test.cxx.o
+
+test/block_test.i: test/block_test.cxx.i
+.PHONY : test/block_test.i
+
+# target to preprocess a source file
+test/block_test.cxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/test/block_test.cxx.i
+.PHONY : test/block_test.cxx.i
+
+test/block_test.s: test/block_test.cxx.s
+.PHONY : test/block_test.s
+
+# target to generate assembly for a file
+test/block_test.cxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/block_test.dir/build.make CMakeFiles/block_test.dir/test/block_test.cxx.s
+.PHONY : test/block_test.cxx.s
 
 test/model_test.o: test/model_test.cxx.o
 .PHONY : test/model_test.o
@@ -431,6 +514,30 @@ test/model_test.cxx.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/test/model_test.cxx.s
 .PHONY : test/model_test.cxx.s
 
+test/player_test.o: test/player_test.cxx.o
+.PHONY : test/player_test.o
+
+# target to build an object file
+test/player_test.cxx.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/test/player_test.cxx.o
+.PHONY : test/player_test.cxx.o
+
+test/player_test.i: test/player_test.cxx.i
+.PHONY : test/player_test.i
+
+# target to preprocess a source file
+test/player_test.cxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/test/player_test.cxx.i
+.PHONY : test/player_test.cxx.i
+
+test/player_test.s: test/player_test.cxx.s
+.PHONY : test/player_test.s
+
+# target to generate assembly for a file
+test/player_test.cxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/player_test.dir/build.make CMakeFiles/player_test.dir/test/player_test.cxx.s
+.PHONY : test/player_test.cxx.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -444,11 +551,13 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... block_test"
 	@echo "... catch"
 	@echo "... fireworks"
-	@echo "... game"
 	@echo "... ge211"
+	@echo "... math"
 	@echo "... model_test"
+	@echo "... player_test"
 	@echo "... src/block.o"
 	@echo "... src/block.i"
 	@echo "... src/block.s"
@@ -470,9 +579,15 @@ help:
 	@echo "... src/view.o"
 	@echo "... src/view.i"
 	@echo "... src/view.s"
+	@echo "... test/block_test.o"
+	@echo "... test/block_test.i"
+	@echo "... test/block_test.s"
 	@echo "... test/model_test.o"
 	@echo "... test/model_test.i"
 	@echo "... test/model_test.s"
+	@echo "... test/player_test.o"
+	@echo "... test/player_test.i"
+	@echo "... test/player_test.s"
 .PHONY : help
 
 

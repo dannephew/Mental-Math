@@ -47,21 +47,59 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install/local">
+			<Target title="rebuild_cache">
 				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test">
+			<Target title="block_test">
+				<Option output="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/block_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCS211_TESTING"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/catch/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 block_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="block_test/fast">
+				<Option output="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/block_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCS211_TESTING"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/catch/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 block_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -72,6 +110,56 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="math">
+				<Option output="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/math" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/../include"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/../include"/>
+					<Add directory="/usr/local/include/SDL2"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 math"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="math/fast">
+				<Option output="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/math" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/../include"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/../include"/>
+					<Add directory="/usr/local/include/SDL2"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 math/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -131,27 +219,36 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
+			<Target title="install/local">
 				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="game">
-				<Option output="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+			<Target title="test">
+				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="player_test">
+				<Option output="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/player_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DCS211_TESTING"/>
 					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src"/>
-					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/../include"/>
-					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/../include"/>
-					<Add directory="/usr/local/include/SDL2"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/catch/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
@@ -160,23 +257,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 game"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 player_test"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="game/fast">
-				<Option output="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+			<Target title="player_test/fast">
+				<Option output="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/player_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DCS211_TESTING"/>
 					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src"/>
-					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/ge211/src/../include"/>
-					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/.cs211/lib/ge211/src/../include"/>
-					<Add directory="/usr/local/include/SDL2"/>
+					<Add directory="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/.cs211/lib/catch/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
@@ -185,7 +281,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 game/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 player_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/danneszhang/Desktop/Fall\ 2021/CS\ 211/Math-Game-main/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -383,56 +479,71 @@
 			<Option target="ge211"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.cxx">
-			<Option target="game"/>
+			<Option target="block_test"/>
+			<Option target="math"/>
+			<Option target="model_test"/>
+			<Option target="player_test"/>
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.hxx">
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/controller.cxx">
-			<Option target="game"/>
+			<Option target="math"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/controller.hxx">
-			<Option target="game"/>
+			<Option target="math"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.cxx">
-			<Option target="game"/>
+			<Option target="block_test"/>
+			<Option target="math"/>
+			<Option target="model_test"/>
+			<Option target="player_test"/>
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.hxx">
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/main.cxx">
-			<Option target="game"/>
+			<Option target="math"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx">
+			<Option target="block_test"/>
+			<Option target="math"/>
 			<Option target="model_test"/>
-			<Option target="game"/>
+			<Option target="player_test"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.hxx">
+			<Option target="block_test"/>
+			<Option target="math"/>
 			<Option target="model_test"/>
-			<Option target="game"/>
+			<Option target="player_test"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx">
-			<Option target="game"/>
+			<Option target="block_test"/>
+			<Option target="math"/>
+			<Option target="model_test"/>
+			<Option target="player_test"/>
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.hxx">
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/view.cxx">
-			<Option target="game"/>
+			<Option target="math"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/view.hxx">
-			<Option target="game"/>
+			<Option target="math"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/block_test.cxx">
+			<Option target="block_test"/>
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/model_test.cxx">
 			<Option target="model_test"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/player_test.cxx">
+			<Option target="player_test"/>
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/CMakeLists.txt">

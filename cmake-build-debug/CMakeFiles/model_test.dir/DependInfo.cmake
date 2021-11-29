@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/model_test.dir/src/block.cxx.o"
+  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/model_test.dir/src/game_config.cxx.o"
   "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/model_test.dir/src/model.cxx.o"
+  "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/model_test.dir/src/player.cxx.o"
   "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/model_test.cxx" "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles/model_test.dir/test/model_test.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

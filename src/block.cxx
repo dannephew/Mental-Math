@@ -47,7 +47,7 @@ Block::assign_coord()
 void
 Block::create_question(Block block)
 {
-    if (block.block_level > 1) {
+    if (block.block_level == 1) {
         //l1
         block.question[0] = ge211::to_string(random_num_l1_.next());
         block.question[2] = ge211::to_string(random_num_l1_.next());

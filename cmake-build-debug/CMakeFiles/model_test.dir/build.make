@@ -66,22 +66,9 @@ include CMakeFiles/model_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/model_test.dir/flags.make
 
-CMakeFiles/model_test.dir/src/model.cxx.o: CMakeFiles/model_test.dir/flags.make
-CMakeFiles/model_test.dir/src/model.cxx.o: ../src/model.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/model_test.dir/src/model.cxx.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/model_test.dir/src/model.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx"
-
-CMakeFiles/model_test.dir/src/model.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/model_test.dir/src/model.cxx.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx" > CMakeFiles/model_test.dir/src/model.cxx.i
-
-CMakeFiles/model_test.dir/src/model.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/src/model.cxx.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx" -o CMakeFiles/model_test.dir/src/model.cxx.s
-
 CMakeFiles/model_test.dir/test/model_test.cxx.o: CMakeFiles/model_test.dir/flags.make
 CMakeFiles/model_test.dir/test/model_test.cxx.o: ../test/model_test.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/model_test.dir/test/model_test.cxx.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/model_test.dir/test/model_test.cxx.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/model_test.dir/test/model_test.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/model_test.cxx"
 
 CMakeFiles/model_test.dir/test/model_test.cxx.i: cmake_force
@@ -92,16 +79,74 @@ CMakeFiles/model_test.dir/test/model_test.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/test/model_test.cxx.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/test/model_test.cxx" -o CMakeFiles/model_test.dir/test/model_test.cxx.s
 
+CMakeFiles/model_test.dir/src/model.cxx.o: CMakeFiles/model_test.dir/flags.make
+CMakeFiles/model_test.dir/src/model.cxx.o: ../src/model.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/model_test.dir/src/model.cxx.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/model_test.dir/src/model.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx"
+
+CMakeFiles/model_test.dir/src/model.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/model_test.dir/src/model.cxx.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx" > CMakeFiles/model_test.dir/src/model.cxx.i
+
+CMakeFiles/model_test.dir/src/model.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/src/model.cxx.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/model.cxx" -o CMakeFiles/model_test.dir/src/model.cxx.s
+
+CMakeFiles/model_test.dir/src/game_config.cxx.o: CMakeFiles/model_test.dir/flags.make
+CMakeFiles/model_test.dir/src/game_config.cxx.o: ../src/game_config.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/model_test.dir/src/game_config.cxx.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/model_test.dir/src/game_config.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.cxx"
+
+CMakeFiles/model_test.dir/src/game_config.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/model_test.dir/src/game_config.cxx.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.cxx" > CMakeFiles/model_test.dir/src/game_config.cxx.i
+
+CMakeFiles/model_test.dir/src/game_config.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/src/game_config.cxx.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/game_config.cxx" -o CMakeFiles/model_test.dir/src/game_config.cxx.s
+
+CMakeFiles/model_test.dir/src/block.cxx.o: CMakeFiles/model_test.dir/flags.make
+CMakeFiles/model_test.dir/src/block.cxx.o: ../src/block.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/model_test.dir/src/block.cxx.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/model_test.dir/src/block.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.cxx"
+
+CMakeFiles/model_test.dir/src/block.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/model_test.dir/src/block.cxx.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.cxx" > CMakeFiles/model_test.dir/src/block.cxx.i
+
+CMakeFiles/model_test.dir/src/block.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/src/block.cxx.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/block.cxx" -o CMakeFiles/model_test.dir/src/block.cxx.s
+
+CMakeFiles/model_test.dir/src/player.cxx.o: CMakeFiles/model_test.dir/flags.make
+CMakeFiles/model_test.dir/src/player.cxx.o: ../src/player.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/model_test.dir/src/player.cxx.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/model_test.dir/src/player.cxx.o -c "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx"
+
+CMakeFiles/model_test.dir/src/player.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/model_test.dir/src/player.cxx.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx" > CMakeFiles/model_test.dir/src/player.cxx.i
+
+CMakeFiles/model_test.dir/src/player.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/src/player.cxx.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/src/player.cxx" -o CMakeFiles/model_test.dir/src/player.cxx.s
+
 # Object files for target model_test
 model_test_OBJECTS = \
+"CMakeFiles/model_test.dir/test/model_test.cxx.o" \
 "CMakeFiles/model_test.dir/src/model.cxx.o" \
-"CMakeFiles/model_test.dir/test/model_test.cxx.o"
+"CMakeFiles/model_test.dir/src/game_config.cxx.o" \
+"CMakeFiles/model_test.dir/src/block.cxx.o" \
+"CMakeFiles/model_test.dir/src/player.cxx.o"
 
 # External object files for target model_test
 model_test_EXTERNAL_OBJECTS =
 
-model_test: CMakeFiles/model_test.dir/src/model.cxx.o
 model_test: CMakeFiles/model_test.dir/test/model_test.cxx.o
+model_test: CMakeFiles/model_test.dir/src/model.cxx.o
+model_test: CMakeFiles/model_test.dir/src/game_config.cxx.o
+model_test: CMakeFiles/model_test.dir/src/block.cxx.o
+model_test: CMakeFiles/model_test.dir/src/player.cxx.o
 model_test: CMakeFiles/model_test.dir/build.make
 model_test: .cs211/lib/catch/libcatch.a
 model_test: .cs211/lib/ge211/src/libge211.a
@@ -110,7 +155,7 @@ model_test: /usr/local/lib/libSDL2_image.dylib
 model_test: /usr/local/lib/libSDL2_mixer.dylib
 model_test: /usr/local/lib/libSDL2_ttf.dylib
 model_test: CMakeFiles/model_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable model_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/danneszhang/Desktop/Fall 2021/CS 211/Math-Game-main/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable model_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/model_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
