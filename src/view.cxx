@@ -21,8 +21,8 @@ static ge211::Color const black_color {0, 0, 100};
 View::View(Model const& model)
         : model_(model),
         config(Game_config()),
-        block(Block()),
-        block_sprite({block.width, block.height}, blue_color),
+        block_(Block(config)),
+        block_sprite({block_.get_dims(block_)}, blue_color),
           text_box_sprite({config.scene_dims.width, config.scene_dims
           .height/5}, blue_color),
           controller_(Controller())
@@ -52,7 +52,7 @@ View::draw(ge211::Sprite_set& set)
 ge211::Dims<int>
 View::initial_window_dimensions() const
 {
-    return model_.config.scene_dims;
+    return config.scene_dims;
 }
 
 void

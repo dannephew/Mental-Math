@@ -11,8 +11,7 @@
 // before random_x_coor_
 Block::Block(Game_config game_config)
     : coord(Position {0,0}),
-    width(17),
-    height(7),
+    config(game_config),
     //random_x_coor_(0, game_config.scene_dims.width - width),
     /*
     random_life_(0, 60),
@@ -22,7 +21,9 @@ Block::Block(Game_config game_config)
     */
     block_level(1),
     player_(Player())
-{}
+{
+        block_dims = config.block_dims_l1;
+}
 
 //Allows model to change the x-coordinate of a block.
 void
@@ -78,17 +79,12 @@ Block::get_coord(Block block)
     return block.coord;
 }
 
-int
-Block::get_width(Block block)
+ge211::Dims<int>
+Block::get_dims(Block block)
 {
-    return block.width;
+    return block.block_dims;
 }
 
-int
-Block::get_height(Block block)
-{
-    return block.height;
-}
 
 std::string
 Block::get_question(Block block)
@@ -112,7 +108,7 @@ Block::advance_level(Block block)
     if (block.block_level == 1) {
         block.block_level += 1;
     }
-    block.height = 12;
+    block.block_dims = config.block_dims_l2;
     //update height and width
 }
 

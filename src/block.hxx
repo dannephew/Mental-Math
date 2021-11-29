@@ -41,9 +41,11 @@ class Block
 {
 private:
         ///Data members
+
         Position coord;       // top left corner of block
-        int width;
-        int height;
+        ge211::Dims<int> block_dims;
+        // int width;
+        // int height;
         std::string question[3];      //math question - can write function for
         // this
             //must convert to int in order to calculate
@@ -97,8 +99,7 @@ public:
 
         //For retrieving block data members in other files:
         Position get_coord(Block block);
-        int get_width(Block block);
-        int get_height(Block block);
+        ge211::Dims<int> get_dims(Block block);
         std::string get_question(Block block);
         int get_answer(Block block);
         int get_block_level(Block block);
