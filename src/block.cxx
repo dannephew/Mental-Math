@@ -82,20 +82,20 @@ Block::next(double dt, Block block) const
 
 
 Position
-Block::get_coord(Block block)
+Block::get_coord(Block block) const
 {
     return block.coord;
 }
 
 ge211::Dims<int>
-Block::get_dims(Block block)
+Block::get_dims(Block block) const
 {
     return block.block_dims;
 }
 
 
 std::string
-Block::get_question(Block block)
+Block::get_question(Block block) const
 {
     std::string s = "";
     for (int i=0; i < 2; i++) {
@@ -105,7 +105,7 @@ Block::get_question(Block block)
 }
 
 int
-Block::get_answer(Block block)
+Block::get_answer(Block block) const
 {
     return block.answer;
 }
@@ -121,7 +121,7 @@ Block::advance_level(Block block)
 }
 
 int
-Block::get_block_level(Block block)
+Block::get_block_level(Block block) const
 {
     return block.block_level;
 }

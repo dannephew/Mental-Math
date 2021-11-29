@@ -120,12 +120,12 @@ Model::game_over()
 }
 
 //Important for view
-std::vector<Block>
-Model::get_blocks() const
-{
-    //blocks is not vector of unique pointers of blocks
-    return (blocks_);
-}
+// std::vector<Block>
+// Model::get_blocks() const
+// {
+//     //blocks is not vector of unique pointers of blocks
+//     return (blocks_);
+// }
 
 // void
 // Model::new_block()

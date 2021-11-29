@@ -23,9 +23,10 @@ View::View(Model const& model)
         config(Game_config()),
         block_(Block(config)),
         block_sprite({block_.get_dims(block_)}, blue_color),
-          text_box_sprite({config.scene_dims.width, config.scene_dims
+        text_box_sprite({config.scene_dims.width, config.scene_dims
           .height/5}, blue_color),
-          controller_(Controller())
+        player_input(),
+        controller_(Controller()),
 //     ge211::Text_sprite const player_input;
 //     ge211::Circle_sprite const life_sprite;
 //
@@ -40,9 +41,18 @@ void
 //View::draw(ge211::Sprite_set&)
 View::draw(ge211::Sprite_set& set)
 {
-    for (Block b : model_.get_blocks()) {
+    for (auto& b : model_.get_blocks()) {
         set.add_sprite(block_sprite, b.get_coord(b));
     }
+
+    //User input text
+    ge211::Text_sprite::Builder input_builder(sans28_);
+    input_builder.color(black_color);
+    input_builder << //user_input variable from controller
+
+    player_input.reconfigure(input_builder);
+    set.add_sprite(player_input, {config.scene_dims.width, config.scene_dims
+    .height/5});
 }
 //draw everything model tells it to
 
@@ -60,24 +70,25 @@ View::initial_window_dimensions() const
 
 
 
-void
-View::load_num()
-{
-    //Return whatever user inputs as the numbers
-    //Load it into a box at the bottom of the screen
-
-    std::string const& current_num = model_.current_num();
-                                            //whatever num has been entered
-                                            // as input
-    //top left corner of box
-    //Box dims: Width is width of screen
-    //          Height is 1/5 the height of the screen
-    ge211::Posn<int> box_position {};
-        //Double? Change type depending on whatever dims type is
-        // auto position = box_position.into<int>();
-    for (std::size_t i = 0; i < current_num.size(); ++i) {
-                            //i < number of digits in num
-    }
-
-}
+//
+// void
+// View::load_num()
+// {
+//     //Return whatever user inputs as the numbers
+//     //Load it into a box at the bottom of the screen
+//
+//     std::string const& current_num = model_.current_num();
+//                                             //whatever num has been entered
+//                                             // as input
+//     //top left corner of box
+//     //Box dims: Width is width of screen
+//     //          Height is 1/5 the height of the screen
+//     ge211::Posn<int> box_position {};
+//         //Double? Change type depending on whatever dims type is
+//         // auto position = box_position.into<int>();
+//     for (std::size_t i = 0; i < current_num.size(); ++i) {
+//                             //i < number of digits in num
+//     }
+//
+// }
 

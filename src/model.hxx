@@ -67,8 +67,12 @@ public:
     //Inspired by HW5
     explicit Model(Game_config const& config = Game_config());
 
-    //For view to use in generating blocks (inspired by Asteroids):
-    std::vector<Block> get_blocks() const;
+    //For view to use in generating blocks:
+    std::vector<Block> const& get_blocks() const { return blocks_; }
+
+    // std::vector<Block> get_blocks() const;
+
+
 
     //Assigns a life to a random block every minute:
     void assign_life();

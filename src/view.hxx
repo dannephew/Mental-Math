@@ -9,6 +9,7 @@ class View
 {
 public:
     explicit View(Model const& model);
+    View(ge211::Text_sprite const& player_input);
 
     void draw(ge211::Sprite_set& set);
     /// Returns the size of the window as given by `config.scene_dims`.
@@ -26,7 +27,7 @@ private:
     //During gameplay:
     ge211::Rectangle_sprite const block_sprite;
     ge211::Rectangle_sprite const text_box_sprite;
-    ge211::Text_sprite const player_input;
+    ge211::Text_sprite player_input;
     ge211::Circle_sprite const life_sprite;
 
 
@@ -35,6 +36,7 @@ private:
     ge211::Rectangle_sprite const replay_button_sprite;
     ge211::Text_sprite const replay_sprite;
 
+    ge211::Font sans28_{"sans.ttf", 28};
 
 };
 

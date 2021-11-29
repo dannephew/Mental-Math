@@ -103,11 +103,11 @@ public:
         //Position assign_coord(); MOVED TO model files
 
         //For retrieving block data members in other files:
-        Position get_coord(Block block);
-        ge211::Dims<int> get_dims(Block block);
-        std::string get_question(Block block);
-        int get_answer(Block block);
-        int get_block_level(Block block);
+        Position get_coord(Block block) const;
+        ge211::Dims<int> get_dims(Block block) const;
+        std::string get_question(Block block) const;
+        int get_answer(Block block) const;
+        int get_block_level(Block block) const;
         // ///Member functions
         // //Assigns the coordinates for a block
         // //y coordinate is always 0; x coordinate is randomized

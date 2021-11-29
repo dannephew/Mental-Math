@@ -19,11 +19,11 @@ Controller::on_frame(double dt)
 {
     // Abstract_game::on_frame(dt);
     model_.on_frame(dt);
-    if (model_.on_frame(dt)) {
-        load_num_();
-        //start telling view to load the numbers that player types
-        //asteroids
-    }
+    // if (model_.on_frame(dt)) {
+    //     load_num_();
+    //     //start telling view to load the numbers that player types
+    //     //asteroids
+    // }
 }
 
 void
@@ -35,6 +35,7 @@ Controller::on_key_up(ge211::Key key)
     }
     if (key == ge211::Key::code('/r')) {
         //check if answer matches any of the answers in the block
+            ///No need to do this ^ bc Model::on_frame does this
     }
 
     //std::string input
