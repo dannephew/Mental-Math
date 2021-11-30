@@ -26,7 +26,7 @@ View::View(Model const& model)
         text_box_sprite({config.scene_dims.width, config.scene_dims
           .height/5}, blue_color),
         player_input(),
-        controller_(Controller()),
+        controller_(Controller())
 //     ge211::Text_sprite const player_input;
 //     ge211::Circle_sprite const life_sprite;
 //
@@ -39,17 +39,17 @@ View::View(Model const& model)
 
 void
 //View::draw(ge211::Sprite_set&)
-View::draw(ge211::Sprite_set& set)
+View::draw(ge211::Sprite_set& set, std::string input)
 {
     for (auto& b : model_.get_blocks()) {
         set.add_sprite(block_sprite, b.get_coord(b));
+        set.add_sprite(question_sprite, b.get_coord(b));
     }
 
     //User input text
     ge211::Text_sprite::Builder input_builder(sans28_);
     input_builder.color(black_color);
-    input_builder << //user_input variable from controller
-
+    input_builder << input;
     player_input.reconfigure(input_builder);
     set.add_sprite(player_input, {config.scene_dims.width, config.scene_dims
     .height/5});

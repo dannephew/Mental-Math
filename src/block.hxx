@@ -83,7 +83,7 @@ public:
 
         //Changes a block to a L2 block
         //Updates height, width, and block_level
-        void advance_level(Block block);
+        void advance_level();
 
         //Allows model to change x-coord of block
         void change_x_coord(float x);
@@ -106,7 +106,7 @@ public:
         Position get_coord(Block block) const;
         ge211::Dims<int> get_dims(Block block) const;
         std::string get_question(Block block) const;
-        int get_answer(Block block) const;
+        std::string get_answer(Block block) const;
         int get_block_level(Block block) const;
         // ///Member functions
         // //Assigns the coordinates for a block

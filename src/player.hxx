@@ -27,13 +27,14 @@ private:
 public:
     Player();
 
+    void increase_correct(Block block);
     void lose_life(); //Decrease lives by 1
     void add_life(); //Increase lives by 1
     //need args?
     void calculate_score(Player& player, Block& block);
     void calculate_total_correct(Player& player);
     bool correct_answer(Player& player, Block& block);
-
+    int get_l1_correct();
     //To retrieve in other files
     int get_total_correct(Player& player);
 

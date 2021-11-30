@@ -3,15 +3,15 @@
 
 Controller::Controller(Model& model)
         : model_(model),
-          view_(model)
+          view_(model_)
         //not recognizing as member variables
 { }
-    //issue
+
 
 void
 Controller::draw(ge211::Sprite_set& set)
 {
-    view_.draw(set);
+    view_.draw(set, player_input);
 }
 
 void
@@ -34,8 +34,11 @@ Controller::on_key_up(ge211::Key key)
         player_input = player_input + char(key.code());
     }
     if (key == ge211::Key::code('/r')) {
+        model_.check_answer(player_input);
+        //Call a function to check if answer matches
+            //If answer matches, then destroy block and add points
+            //void check_answer(std::string input);
         //check if answer matches any of the answers in the block
-            ///No need to do this ^ bc Model::on_frame does this
     }
 
     //std::string input

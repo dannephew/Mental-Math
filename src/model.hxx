@@ -73,6 +73,10 @@ public:
     // std::vector<Block> get_blocks() const;
 
 
+    //Call a function to check if answer matches
+    //If answer matches, then destroy block and add points
+    void check_answer(std::string input);
+
 
     //Assigns a life to a random block every minute:
     void assign_life();

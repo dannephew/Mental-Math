@@ -86,5 +86,21 @@ Player::add_life()
     lives++;
 }
 
+void
+Player::increase_correct(Block b)
+{
+    if (b.get_block_level(b) == 1) {
+        num_l1_correct++;
+    } else {
+        num_l2_correct++;
+    }
+}
+
+int
+Player::get_l1_correct()
+{
+    return num_l1_correct;
+}
+
 
 //compare input with block answer

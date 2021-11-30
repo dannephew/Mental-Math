@@ -72,6 +72,9 @@ Model::on_frame(double dt)
         ///1. Collect user input in controller
         ///2. Complete Player::correct_answer(), which compares user input to
         /// each block's answer
+            ///If correct, it should: destroy block and add points
+        ///3. A Player function should increment player.num_l1_correct or l2
+
 
     /// CASE 4: Player correctly answers block with extra life
         ///In order to accomplish this, following must be completed:
@@ -82,6 +85,11 @@ Model::on_frame(double dt)
             /// assigned a life
         ///3. Use player.add_life()
 
+
+    ////    Increase in difficulty once player gets 10 l1 correct
+    if (player.get_l1_correct() >= 10) {
+        block_.advance_level();
+    }
 
     ///At every instance:
     ///Move every b in blocks_ forward based on dt
@@ -183,10 +191,19 @@ Model::calculate_answer(Block block)
     return 0;
 }
 
-bool
-Model::correct_answer()
+
+void
+Model::check_answer(std::string input)
 {
-    return false;
+    for (Block& b : blocks_) {
+        if (b.get_answer(b) == input) {
+            //collect the data of b
+            destroy_block(b);
+            //call a player function that adds to num_level correct
+            player.increase_correct(b);
+            return;
+        }
+    }
 }
 
 // void

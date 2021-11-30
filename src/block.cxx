@@ -104,20 +104,18 @@ Block::get_question(Block block) const
     return s;
 }
 
-int
+std::string
 Block::get_answer(Block block) const
 {
-    return block.answer;
+    std::string s = "";
+    s = block.answer;
+    return s;
 }
 
 void
-Block::advance_level(Block block)
+Block::advance_level()
 {
-    if (block.block_level == 1) {
-        block.block_level += 1;
-    }
-    block.block_dims = config.block_dims_l2;
-    //update height and width
+    block_level++;
 }
 
 int

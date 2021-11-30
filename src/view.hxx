@@ -11,7 +11,7 @@ public:
     explicit View(Model const& model);
     View(ge211::Text_sprite const& player_input);
 
-    void draw(ge211::Sprite_set& set);
+    void draw(ge211::Sprite_set& set, std::string input);
     /// Returns the size of the window as given by `config.scene_dims`.
     ge211::Dims<int> initial_window_dimensions() const;
 
@@ -28,6 +28,8 @@ private:
     ge211::Rectangle_sprite const block_sprite;
     ge211::Rectangle_sprite const text_box_sprite;
     ge211::Text_sprite player_input;
+    ge211::Text_sprite question_sprite;
+
     ge211::Circle_sprite const life_sprite;
 
 

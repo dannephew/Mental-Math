@@ -19,7 +19,7 @@ struct Game_config
     ge211::Dims<int> velocity_0;
 
     ge211::Dims<int> block_dims_l1;
-    ge211::Dims<int> block_dims_l2;
+    // ge211::Dims<int> block_dims_l2;
 
 
 
