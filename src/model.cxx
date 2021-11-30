@@ -82,21 +82,21 @@ Model::get_blocks()
     return blocks_;
 }
 
-void
-Model::new_block()
-{
-    int x = random_x_coor_.next();
-
-
-    //creates new block
-
-        //NOT TRUE DONT USE:
-        //make_unique creates a unique pointer to the block object
-        //because .push_back() requires a pointer as an input
-    //blocks.push_back(std::make_unique<Block>(
-    // )
-
-}
+// void
+// Model::new_block()
+// {
+//     int x = random_x_coor_.next();
+//
+//
+//     //creates new block
+//
+//         //NOT TRUE DONT USE:
+//         //make_unique creates a unique pointer to the block object
+//         //because .push_back() requires a pointer as an input
+//     //blocks.push_back(std::make_unique<Block>(
+//     // )
+//
+// }
 
 
 
