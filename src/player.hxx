@@ -27,6 +27,8 @@ private:
 public:
     Player();
 
+    int get_life();
+
     void increase_correct(Block block);
     void lose_life(); //Decrease lives by 1
     void add_life(); //Increase lives by 1
@@ -37,6 +39,7 @@ public:
     int get_l1_correct();
     //To retrieve in other files
     int get_total_correct(Player& player);
+    int get_score();
 
     //create functions to return each data member in class
         //functions should be const bc don't modify data

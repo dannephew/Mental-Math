@@ -25,6 +25,13 @@ View::View(Model const& model)
         block_sprite({block_.get_dims(block_)}, blue_color),
         text_box_sprite({config.scene_dims.width, config.scene_dims
           .height/5}, blue_color),
+        end_game_sprite({config.scene_dims.width, config.scene_dims.height},
+                        red_color),
+        replay_button_sprite({config.scene_dims.width/2, config.scene_dims
+        .height/5}),
+        replay_sprite("game over", sans28_),
+        //    ge211::Rectangle_sprite const replay_button_sprite;
+        //     ge211::Text_sprite const replay_sprite;
         player_input(),
         controller_(Controller())
 //     ge211::Text_sprite const player_input;
@@ -44,6 +51,20 @@ View::draw(ge211::Sprite_set& set, std::string input)
     for (auto& b : model_.get_blocks()) {
         set.add_sprite(block_sprite, b.get_coord(b));
         set.add_sprite(question_sprite, b.get_coord(b));
+    }
+
+    if (model_.is_game_over() == true) {
+        set.add_sprite(end_game_sprite, {0, 0});
+        set.add_sprite(replay_button_sprite, {config.scene_dims.width/2,
+                                              config.scene_dims.height/2});
+        set.add_sprite(replay_sprite, {config.scene_dims.width/2,
+                                       config.scene_dims.height/2});
+        ge211::Text_sprite::Builder end_game_text_builder(sans28_);
+        end_game_text_builder.color(white_color);
+        end_game_text_builder << "Score:"
+                        << (int) player_.get_score();
+        end_game_text.reconfigure(end_game_text_builder);
+        set.add_sprite(end_game_text, {0, 0});
     }
 
     //User input text

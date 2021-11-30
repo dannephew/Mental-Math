@@ -35,6 +35,7 @@ private:
 
     //During endgame:
     ge211::Rectangle_sprite const end_game_sprite;
+    ge211::Text_sprite const end_game_text;
     ge211::Rectangle_sprite const replay_button_sprite;
     ge211::Text_sprite const replay_sprite;
 

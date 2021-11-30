@@ -15,7 +15,7 @@ Model::Model(Game_config const& config)
       //controller_(Controller()), Don't need?
       block_generation_rate(1),
       player(Player()),
-      random_x_coord(0, config.scene_dims.width - config.block_dims_l1.width)
+      random_x_coord(0, config.scene_dims.width - config.block_dims_l1.width),
 
 {
     static ge211::Timer t = ge211::Timer();
@@ -43,6 +43,7 @@ Model::Model(Game_config const& config)
 void
 Model::on_frame(double dt)
 {
+
     //CASE 1: A block hits bottom of screen (decrease life, remove from blocks_)
     //Assume bottom-most block on the screen is the last element in blocks_
             ///bottom-most block should be the first element in blocks_
@@ -51,6 +52,9 @@ Model::on_frame(double dt)
         player.lose_life(); //Decrease player lives by 1
         //Assume that b is at the end of the list, and remove it
         destroy_block(blocks_[0]);
+        if (player.get_life() == 0) {
+            game_over();
+        }
     }
     /* IN CASE BLOCK IS NOT at bottom of screen, can continue this part
     // Check all blocks on screen (i.e. everything in blocks_) if it hits bot
@@ -120,11 +124,15 @@ Model::assign_life()
 void
 Model::game_over()
 {
+    //Only called once game_over is true.
+    blocks_.clear();
+
     //If game over is true:
     //Must:
         //block_vector.clear()
         //Tell view to display game over screen
         //Reset timer
+
 }
 
 //Important for view
@@ -204,6 +212,15 @@ Model::check_answer(std::string input)
             return;
         }
     }
+}
+
+bool
+Model::is_game_over()
+{
+    if (player.get_life() == 0) {
+        return true;
+    };
+    return false;
 }
 
 // void

@@ -102,5 +102,17 @@ Player::get_l1_correct()
     return num_l1_correct;
 }
 
+int
+Player::get_life()
+{
+    return lives;
+}
+
+int
+Player::get_score()
+{
+    return score;
+}
+
 
 //compare input with block answer

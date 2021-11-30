@@ -32,7 +32,7 @@ private:
     // random life
     //https://tov.github.io/ge211/classge211_1_1_random__source.html#ab82bd37222911c65a8c9d03a28c986a3
 
-    //static ge211::Timer time_game();
+    // static ge211::Timer time_game;
 
     // Block block_level_   = Block::block_level::l1;
 
@@ -84,6 +84,7 @@ public:
     //Compares player_input against every block's answer in blocks
     bool correct_answer();
 
+    bool is_game_over();
 
     //Destroys all blocks
     //Maybe tells view to render the endgame screen

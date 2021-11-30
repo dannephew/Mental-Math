@@ -18,6 +18,9 @@ void
 Controller::on_frame(double dt)
 {
     // Abstract_game::on_frame(dt);
+    // if (model_.is_game_over() == true) {
+    //
+    // }
     model_.on_frame(dt);
     // if (model_.on_frame(dt)) {
     //     load_num_();
